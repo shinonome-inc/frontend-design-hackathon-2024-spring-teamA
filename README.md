@@ -1,5 +1,50 @@
 # テンプレートB
 
+## 初期設定
+---
+1.クローン（上のものは```ssh```を利用するもので下のものは```https```を利用するものです）
+```
+git clone git@github.com:shinonome-inc/frontend-design-hackathon-2024-spring-teamA.git
+```
+or
+```
+git clone https://github.com/shinonome-inc/frontend-design-hackathon-2024-spring-teamA.git
+```
+2.移動
+```
+cd ./frontend-design-hackathon-2024-spring-teamA
+```
+3.必要なパッケージのインストール
+```
+npm install next react react-dom
+```
+4.styled-componentsを利用するためにインストール
+```
+npm install styled-components
+```
+※ 参考リンク：https://dev-harry-next.com/frontend/styled-components-in-nextjs<br><br>
+5. アプリをローカルで動かす
+```
+npm run dev
+```
+---
+
+## deployの方法
+---
+参考リンク：https://zenn.dev/pino0701/articles/nextjs_github_pages
+うまくいかない場合は、記事内のnextjs.ymlから以下の部分を削除
+```
+ with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
+```
+---
+---
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -8,12 +53,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
