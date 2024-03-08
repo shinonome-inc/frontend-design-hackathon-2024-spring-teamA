@@ -30,12 +30,14 @@ export default Question1Page;
 const Question1Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  position: absolute;
 `;
 
 const Image = styled.img`
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   inset: 0px;
@@ -46,7 +48,7 @@ const Question1Content = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   padding: 80px 140px;
   align-items: center;
   flex-shrink: 0;
