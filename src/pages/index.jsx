@@ -28,14 +28,6 @@ export default IndexPage;
 const AllWrapper = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
-  padding: 0;
-  margin: 0;
-`;
-
-const AllWrapper = styled.div`
-  width: 100%;
-  height: 100%;
 `;
 
 const Button = styled.button`
