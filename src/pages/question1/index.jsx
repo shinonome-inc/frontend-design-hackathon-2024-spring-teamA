@@ -9,28 +9,26 @@ const Question1Page = () => {
     router.push(paths.question2);
   };
   return (
-    <Question1Container>
-      <Question1Wrapper>
-        <Question1Content>
-          <Question1Text>
-            <h1>あなたは旅行で何をしたい？</h1>
-          </Question1Text>
-          <Question1Choices>
-            <Button onClick={onClick}>観光地の散策</Button>
-            <Button onClick={onClick}>美味しいものを食べたい</Button>
-            <Button onClick={onClick}>アクティビティを楽しみたい</Button>
-            <Button onClick={onClick}>リフレッシュしたい</Button>
-          </Question1Choices>
-        </Question1Content>
+    <Question1Wrapper>
+      <Question1Content>
+        <Question1Text>
+          <h1>あなたは旅行で何をしたい？</h1>
+        </Question1Text>
+        <Question1Choices>
+          <Button onClick={onClick}>観光地の散策</Button>
+          <Button onClick={onClick}>美味しいものを食べたい</Button>
+          <Button onClick={onClick}>アクティビティを楽しみたい</Button>
+          <Button onClick={onClick}>リフレッシュしたい</Button>
+        </Question1Choices>
         <QuestionProgress>アイコン</QuestionProgress>
-      </Question1Wrapper>
-    </Question1Container>
+      </Question1Content>
+    </Question1Wrapper>
   );
 };
 
 export default Question1Page;
 
-const Question1Container = styled.div`
+const Question1Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +36,7 @@ const Question1Container = styled.div`
   background-color: cadetblue;
 `;
 
-const Question1Wrapper = styled.div`
+const Question1Content = styled.div`
   display: flex;
   width: 1500px;
   height: 800px;
@@ -50,14 +48,6 @@ const Question1Wrapper = styled.div`
   border-radius: 20px;
   border: 5px solid #dcdcdc;
   background: #fff;
-`;
-
-const Question1Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
 `;
 
 const QuestionProgress = styled.div`
