@@ -10,6 +10,7 @@ const Question1Page = () => {
   };
   return (
     <Question1Wrapper>
+      <Image src={"/Background.png"} />
       <Question1Content>
         <Question1Text>
           <h1>あなたは旅行で何をしたい？</h1>
@@ -17,8 +18,6 @@ const Question1Page = () => {
         <Question1Choices>
           <Button onClick={onClick}>観光地の散策</Button>
           <Button onClick={onClick}>美味しいものを食べたい</Button>
-          <Button onClick={onClick}>アクティビティを楽しみたい</Button>
-          <Button onClick={onClick}>リフレッシュしたい</Button>
         </Question1Choices>
         <QuestionProgress>アイコン</QuestionProgress>
       </Question1Content>
@@ -30,19 +29,25 @@ export default Question1Page;
 
 const Question1Wrapper = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 1080px;
-  background-color: cadetblue;
+  width: 100%;
+  height: 100%;
+`;
+
+const Image = styled.img`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  color: transparent;
 `;
 
 const Question1Content = styled.div`
   display: flex;
-  width: 1500px;
-  height: 800px;
-  padding: 80px 140px;
+  justify-content: center;
   flex-direction: column;
-  justify-content: space-between;
+  position: absolute;
+  padding: 80px 140px;
   align-items: center;
   flex-shrink: 0;
   border-radius: 20px;
