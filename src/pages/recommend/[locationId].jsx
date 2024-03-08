@@ -17,7 +17,7 @@ const RecommendPage = () => {
         <Image
           src={"/Background.png"}
           layout="fill"
-          objectFit='cover'
+          objectFit='fill'
         />
         <ExplanationWrapper>
           <Explanation lid={locationId}/>
