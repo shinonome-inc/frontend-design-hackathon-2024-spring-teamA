@@ -60,6 +60,7 @@ const ResultBody = styled.div`
   box-sizing: border-box;
   top: 0;
   left: 0;
+  bottom: 0;
   height: 100vh;
   padding: 10%;
 `;
@@ -81,6 +82,11 @@ const ContentWrapper = styled.div`
   gap: 0px;
   border: solid #eee4cb 5px;
   border-radius: 5px;
+
+  @media(max-width: 500px){
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+  }
 `;
 
 const LeftExplanation = styled.div`
@@ -144,6 +150,7 @@ const RightExplanation = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 16px;
   background-color: ${colors.Write};
   padding: 60px;
   > * {
@@ -182,6 +189,7 @@ const PageButtonSpot = styled.button`
   font-size: 36px;
   width: 100%;
   text-align: center;
+  background-color: ${colors.Write};
   border-radius: 25px;
   border: solid #217475 2px;
   color: #217475;
@@ -196,8 +204,11 @@ const PageButtonSpot = styled.button`
 
 const PageButtonIndex = styled.button`
   font-size: 36px;
+  min-width: 250px;
+  max-width: 100%;
   width: 50%;
   text-align: center;
+  background-color: ${colors.Write};
   border-radius: 25px;
   border: solid #77782e 2px;
   color: #77782e;
@@ -208,6 +219,10 @@ const PageButtonIndex = styled.button`
   justify-content: center;
   align-content: baseline;
   gap: 16px;
+
+  @media(max-width: 500px){
+    min-width: 150px;
+  }
 `;
 
 const ButtonTextWrapper = styled.p`
