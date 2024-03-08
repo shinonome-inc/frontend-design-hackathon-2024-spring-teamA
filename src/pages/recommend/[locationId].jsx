@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styled from 'styled-components';
 import { colors } from '@/colors';
 import Explanation from './explanation';
+import Image from 'next/image';
 
 const RecommendPage = () => {
   const router = useRouter();
@@ -11,25 +12,46 @@ const RecommendPage = () => {
     router.push(paths.index);
   }
   return (
-    <AllWrapper>
-      <Explanation lid={locationId}/>
-      <button onClick={onClick}>スタートに戻る</button>
-    </AllWrapper>
+    <ResultBody>
+      <AllWrapper>
+        <Image
+          src={"/Background.png"}
+          layout="fill"
+          objectFit='cover'
+        />
+        <ExplanationWrapper>
+          <Explanation lid={locationId}/>
+          <BackIndexButton onClick={onClick}>スタートに戻る</BackIndexButton>
+        </ExplanationWrapper>
+      </AllWrapper>
+    </ResultBody>
   );
 };
 
 export default RecommendPage;
 
-const AllWrapper = styled.div`
-  background-color: ${colors.Beige};
-  width: 100%;
+const ResultBody = styled.div`
+  top: 0;
+  left: 0;
   height: 100%;
-  margin: 0;
+  padding: 10%;
 `;
 
-const RecommendTitle = styled.h1`
-  font-size: 96;
-  font-weight: Bold;
-  font-family: "Noto Sans JP";
-  color: ${colors.Blue};
+const AllWrapper = styled.div`
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ExplanationWrapper = styled.div`
+  z-index: 10;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+`;
+
+const BackIndexButton = styled.button`
+  margin: 0;
 `;
