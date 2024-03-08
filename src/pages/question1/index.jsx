@@ -32,7 +32,10 @@ export default Question1Page;
 
 const Question1Container = styled.div`
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 1080px;
+  background-color: cadetblue;
 `;
 
 const Question1Wrapper = styled.div`
