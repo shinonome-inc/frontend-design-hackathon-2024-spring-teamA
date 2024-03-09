@@ -2,8 +2,8 @@ import { paths } from "../../paths";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { colors } from "@/colors";
-import Explanation from "./explanation";
 import Image from "next/image";
+import LeftContents from "./LeftContents";
 
 const RecommendPage = () => {
   const router = useRouter();
@@ -16,16 +16,16 @@ const RecommendPage = () => {
       <AllWrapper>
         <Image src={"/Background.png"} layout="fill" objectFit="fill" />
         <ContentWrapper>
-          {/* <Explanation lid={locationId}/> */}
           <LeftExplanation>
-            <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
+            <LeftContents locationId={locationId}/>
+            {/* <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
             <CenterBelt>
               <MiddleText>あなたにおすすめの神社は</MiddleText>
               <ShrineNameText>{locationId}</ShrineNameText>
               <ButtonWrapper>
                 <DetailLinkButton>詳しく見る</DetailLinkButton>
               </ButtonWrapper>
-            </CenterBelt>
+            </CenterBelt> */}
           </LeftExplanation>
           <RightExplanation>
             <DetailWrapper>
@@ -61,8 +61,20 @@ const ResultBody = styled.div`
   top: 0;
   left: 0;
   bottom: 0;
-  height: 100vh;
+  height: calc(100vh - 16px);
   padding: 10%;
+  > img {
+    vertical-align: bottom;
+  }
+  @media(max-width: 650px){
+    padding: 3%;
+    overflow-y: hidden;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 const AllWrapper = styled.div`
@@ -82,20 +94,18 @@ const ContentWrapper = styled.div`
   gap: 0px;
   border: solid #eee4cb 5px;
   border-radius: 5px;
-
-  @media(max-width: 500px){
+  overflow-y: auto;
+  @media(max-width: 600px){
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
   }
 `;
 
 const LeftExplanation = styled.div`
-  z-index: 9;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: space-around;
+  max-width: 100%;
+  @media(max-width: 600px){
+    min-height: 600px; 
+  }
 `;
 
 const CenterBelt = styled.div`
@@ -152,7 +162,7 @@ const RightExplanation = styled.div`
   justify-content: space-between;
   gap: 16px;
   background-color: ${colors.Write};
-  padding: 60px;
+  padding: 10%;
   > * {
     font-family: serif;
   }
