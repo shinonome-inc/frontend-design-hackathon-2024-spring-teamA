@@ -17,6 +17,9 @@ const RecommendPage = () => {
   };
   return (
     <>
+      <LogoWrapper>
+        <Image src={"/HeaderRogo.png"} height={20} width={180} objectFit="cover" />
+      </LogoWrapper>
       {isPopupOpen ? <PopupContents setOpen={setPopupOpen}/> : <></>}
       <ResultBody>
         <AllWrapper>
@@ -66,7 +69,7 @@ const ResultBody = styled.div`
     vertical-align: bottom;
   }
   @media (max-width: 650px) {
-    padding: 3%;
+    padding: 10% 3%;
     overflow-y: hidden;
   }
   ::-webkit-scrollbar {
@@ -75,6 +78,18 @@ const ResultBody = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none;
 `;
+
+const LogoWrapper = styled.div`
+  margin: 0;
+  z-index: 100;
+  height: 5%;
+  width: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+`;
+
 
 const AllWrapper = styled.div`
   margin: 0;
