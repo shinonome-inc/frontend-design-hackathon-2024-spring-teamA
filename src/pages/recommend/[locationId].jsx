@@ -4,53 +4,59 @@ import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
 import LeftContents from "./LeftContents";
+import PopupContents from "./PopupManager/PopupContents";
+import { useState } from "react";
 
 const RecommendPage = () => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
   const router = useRouter();
   const locationId = router.query.locationId;
   const onClick = () => {
     router.push(paths.index);
   };
   return (
-    <ResultBody>
-      <AllWrapper>
-        <Image src={"/Background.png"} layout="fill" objectFit="fill" />
-        <ContentWrapper>
-          <LeftExplanation>
-            <LeftContents locationId={locationId}/>
-            {/* <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
-            <CenterBelt>
-              <MiddleText>あなたにおすすめの神社は</MiddleText>
-              <ShrineNameText>{locationId}</ShrineNameText>
+    <>
+      {isPopupOpen ? <PopupContents setOpen={setPopupOpen}/> : <></>}
+      <ResultBody>
+        <AllWrapper>
+          <Image src={"/Background.png"} layout="fill" objectFit="fill" />
+          <ContentWrapper>
+            <LeftExplanation>
+              <LeftContents locationId={locationId} setOpen={setPopupOpen} />
+              {/* <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
+              <CenterBelt>
+                <MiddleText>あなたにおすすめの神社は</MiddleText>
+                <ShrineNameText>{locationId}</ShrineNameText>
+                <ButtonWrapper>
+                  <DetailLinkButton>詳しく見る</DetailLinkButton>
+                </ButtonWrapper>
+              </CenterBelt> */}
+            </LeftExplanation>
+            <RightExplanation>
+              <DetailWrapper>
+                <MiddleText>この神社の御利益は...</MiddleText>
+                <BenefitTitle>{locationId}</BenefitTitle>
+                <DetailExplanation>{locationId}</DetailExplanation>
+                <PageButtonSpot>
+                  <ButtonTextWrapper>この神社周辺のおすすめスポット</ButtonTextWrapper>
+                  <ImageWrapper>
+                    <Image src={"/Vector.png"} width={32} height={32} />
+                  </ImageWrapper>
+                </PageButtonSpot>
+              </DetailWrapper>
               <ButtonWrapper>
-                <DetailLinkButton>詳しく見る</DetailLinkButton>
+                <PageButtonIndex onClick={onClick}>
+                  <ButtonTextWrapper>再診断する</ButtonTextWrapper>
+                  <ImageWrapper>
+                    <Image src={"/Replay.png"} width={32} height={32} />
+                  </ImageWrapper>
+                </PageButtonIndex>
               </ButtonWrapper>
-            </CenterBelt> */}
-          </LeftExplanation>
-          <RightExplanation>
-            <DetailWrapper>
-              <MiddleText>この神社の御利益は...</MiddleText>
-              <BenefitTitle>{locationId}</BenefitTitle>
-              <DetailExplanation>{locationId}</DetailExplanation>
-              <PageButtonSpot>
-                <ButtonTextWrapper>この神社周辺のおすすめスポット</ButtonTextWrapper>
-                <ImageWrapper>
-                  <Image src={"/Vector.png"} width={32} height={32} />
-                </ImageWrapper>
-              </PageButtonSpot>
-            </DetailWrapper>
-            <ButtonWrapper>
-              <PageButtonIndex onClick={onClick}>
-                <ButtonTextWrapper>再診断する</ButtonTextWrapper>
-                <ImageWrapper>
-                  <Image src={"/Replay.png"} width={32} height={32} />
-                </ImageWrapper>
-              </PageButtonIndex>
-            </ButtonWrapper>
-          </RightExplanation>
-        </ContentWrapper>
-      </AllWrapper>
-    </ResultBody>
+            </RightExplanation>
+          </ContentWrapper>
+        </AllWrapper>
+      </ResultBody>
+    </>
   );
 };
 
@@ -66,11 +72,11 @@ const ResultBody = styled.div`
   > img {
     vertical-align: bottom;
   }
-  @media(max-width: 650px){
+  @media (max-width: 650px) {
     padding: 3%;
     overflow-y: hidden;
   }
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none;
@@ -95,7 +101,7 @@ const ContentWrapper = styled.div`
   border: solid #eee4cb 5px;
   border-radius: 5px;
   overflow-y: auto;
-  @media(max-width: 600px){
+  @media (max-width: 600px) {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
   }
@@ -103,8 +109,8 @@ const ContentWrapper = styled.div`
 
 const LeftExplanation = styled.div`
   max-width: 100%;
-  @media(max-width: 600px){
-    min-height: 600px; 
+  @media (max-width: 600px) {
+    min-height: 600px;
   }
 `;
 
@@ -230,7 +236,7 @@ const PageButtonIndex = styled.button`
   align-content: baseline;
   gap: 16px;
 
-  @media(max-width: 500px){
+  @media (max-width: 500px) {
     min-width: 150px;
   }
 `;

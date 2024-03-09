@@ -3,16 +3,17 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
+import { useEffect } from "react";
 
-const LeftContents = (props) => {
+const LeftContents = ({ locationId, setOpen }) => {
   return (
     <LeftExplanation>
       <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
       <CenterBelt>
         <MiddleText>あなたにおすすめの神社は</MiddleText>
-        <ShrineNameText>{props.locationId}</ShrineNameText>
+        <ShrineNameText>{locationId}</ShrineNameText>
         <ButtonWrapper>
-          <DetailLinkButton>詳しく見る</DetailLinkButton>
+          <DetailLinkButton onClick={() => { setOpen(true) }}>詳しく見る</DetailLinkButton>
         </ButtonWrapper>
       </CenterBelt>
     </LeftExplanation>
