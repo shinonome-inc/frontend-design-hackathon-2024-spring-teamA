@@ -23,14 +23,6 @@ const RecommendPage = () => {
           <ContentWrapper>
             <LeftExplanation>
               <LeftContents locationId={locationId} setOpen={setPopupOpen} />
-              {/* <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
-              <CenterBelt>
-                <MiddleText>あなたにおすすめの神社は</MiddleText>
-                <ShrineNameText>{locationId}</ShrineNameText>
-                <ButtonWrapper>
-                  <DetailLinkButton>詳しく見る</DetailLinkButton>
-                </ButtonWrapper>
-              </CenterBelt> */}
             </LeftExplanation>
             <RightExplanation>
               <DetailWrapper>
@@ -199,6 +191,8 @@ const DetailExplanation = styled.div`
   margin: 0;
   font-size: 28px;
   width: 100%;
+  inline-size: 100%;
+  word-break: break-all;
 `;
 
 const PageButtonSpot = styled.button`
