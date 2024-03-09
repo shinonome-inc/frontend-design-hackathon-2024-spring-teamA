@@ -13,6 +13,7 @@ const RecommendPage = () => {
   const locationId = router.query.locationId;
   const onClick = () => {
     router.push(paths.index);
+    console.log(router);
   };
   return (
     <>
@@ -29,8 +30,8 @@ const RecommendPage = () => {
                 <MiddleText>この神社の御利益は...</MiddleText>
                 <BenefitTitle>{locationId}</BenefitTitle>
                 <DetailExplanation>{locationId}</DetailExplanation>
-                <PageButtonSpot>
-                  <ButtonTextWrapper>この神社周辺のおすすめスポット</ButtonTextWrapper>
+                <PageButtonSpot onClick={onClick}>
+                  <ButtonTextWrapper>神社周辺のおすすめスポット</ButtonTextWrapper>
                   <ImageWrapper>
                     <Image src={"/Vector.png"} width={32} height={32} />
                   </ImageWrapper>
