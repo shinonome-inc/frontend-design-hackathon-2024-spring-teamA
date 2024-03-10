@@ -1,11 +1,25 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+    @font-face {
+      font-family : "Noto Serif JP";
+      src: url("/fonts/NotoSerifJP-Regular.otf") format("opentype");
+    }
+
+    body {
+      font-family: "Noto Serif JP", serif;
+    }
+`;
 
 export const Button = ({ buttonText, onClick }) => (
-  <StyledButton onClick={onClick}>
-    <StyledLine />
-    <StyledText>{buttonText}</StyledText>
-  </StyledButton>
+  <>
+    <GlobalStyle />
+    <StyledButton onClick={onClick}>
+      <StyledLine />
+      <StyledText>{buttonText}</StyledText>
+    </StyledButton>
+  </>
 );
 
 const StyledButton = styled.button`
