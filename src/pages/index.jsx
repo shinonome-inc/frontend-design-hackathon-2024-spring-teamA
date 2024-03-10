@@ -1,8 +1,9 @@
-import { paths } from '../paths';
+import { paths } from "../paths";
 import { useRouter } from "next/router";
-import React from 'react';
-import styled from 'styled-components';
-import Image from 'next/image';
+import React from "react";
+import styled from "styled-components";
+import Image from "next/image";
+import { Button } from "../components/title/Button";
 
 const IndexPage = () => {
   const router = useRouter();
@@ -12,13 +13,10 @@ const IndexPage = () => {
 
   return (
     <AllWrapper>
-      <Image
-        src={"/Background.png"}
-        layout="fill"
-      />
+      <Image src={"/Background.png"} layout="fill" />
       <TextWrapper>
         <Title>Travel Recommending App</Title>
-        <Button onClick={onClick}>質問に答える</Button>
+        <Button buttonText="診断開始" onClick={onClick} />
       </TextWrapper>
     </AllWrapper>
   );
@@ -28,13 +26,6 @@ export default IndexPage;
 const AllWrapper = styled.div`
   width: 100%;
   height: 100%;
-`;
-
-const Button = styled.button`
-  width: 50%;
-  background-color: green;
-  justify-self: center;
-  margin: 0 auto;
 `;
 
 const Title = styled.h1`
