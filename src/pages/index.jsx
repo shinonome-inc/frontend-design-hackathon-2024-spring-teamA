@@ -28,6 +28,9 @@ const IndexPage = () => {
   return (
     <>
       <GlobalStyle />
+      <LogoWrapper>
+        <Image src={"/title/logo.svg"} width={400} height={200} />
+      </LogoWrapper>
       <AllWrapper>
         <Image src={"/Background.png"} layout="fill" />
         <ImageWrapper>
@@ -51,6 +54,18 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+const LogoWrapper = styled.div`
+  margin: 0;
+  left: 1%;
+  z-index: 100;
+  height: 5%;
+  width: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+`;
 
 const AllWrapper = styled.div`
   width: 100%;
