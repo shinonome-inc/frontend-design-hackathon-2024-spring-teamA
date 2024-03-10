@@ -10,14 +10,14 @@ const Question1Page = () => {
   };
   return (
     <Question1Wrapper>
-      <Image src={"/Background.png"} />
+      <HeaderLogo>
+        <LogoImage src={"/logotitle.png"} />
+      </HeaderLogo>
       <Question1Content>
-        <Question1Text>
-          <h1>あなたは旅行で何をしたい？</h1>
-        </Question1Text>
+        <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
         <Question1Choices>
-          <Button onClick={onClick}>観光地の散策</Button>
-          <Button onClick={onClick}>美味しいものを食べたい</Button>
+          <Button onClick={onClick}>はい</Button>
+          <Button onClick={onClick}>いいえ</Button>
         </Question1Choices>
         <QuestionProgress>アイコン</QuestionProgress>
       </Question1Content>
@@ -28,12 +28,24 @@ const Question1Page = () => {
 export default Question1Page;
 
 const Question1Wrapper = styled.div`
+  background-image: url("/background.png");
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   position: absolute;
+`;
+
+const HeaderLogo = styled.header`
+  display: flex;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: rgba(183, 205, 205, 1);
+`;
+
+const LogoImage = styled.img`
+  height: 40px;
 `;
 
 const Image = styled.img`
