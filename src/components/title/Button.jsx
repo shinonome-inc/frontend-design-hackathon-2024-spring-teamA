@@ -1,25 +1,11 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-    @font-face {
-      font-family : "Noto Serif JP";
-      src: url("/fonts/NotoSerifJP-Regular.otf") format("opentype");
-    }
-
-    body {
-      font-family: "Noto Serif JP", serif;
-    }
-`;
+import styled from "styled-components";
 
 export const Button = ({ buttonText, onClick }) => (
-  <>
-    <GlobalStyle />
-    <StyledButton onClick={onClick}>
-      <StyledLine />
-      <StyledText>{buttonText}</StyledText>
-    </StyledButton>
-  </>
+  <StyledButton onClick={onClick}>
+    <StyledLine />
+    <StyledText>{buttonText}</StyledText>
+  </StyledButton>
 );
 
 const StyledButton = styled.button`
@@ -29,10 +15,11 @@ const StyledButton = styled.button`
   justify-content: center;
   font-size: 54px;
   writing-mode: vertical-rl;
-  font-family: serif;
+  white-space: nowrap;
+  font-family: Noto Serif JP;
   letter-spacing: 15px;
-  width: 150px;
-  height: 400px;
+  width: 180px;
+  height: 440px;
   text-align: center;
   background-color: #6dc5c6;
   border: none;
