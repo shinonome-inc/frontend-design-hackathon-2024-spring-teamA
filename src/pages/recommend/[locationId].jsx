@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
-import PopupContents from "./PopupManager/PopupContents";
+import PopupContents from "./PopupContents/index";
 import { useState } from "react";
 
 const RecommendPage = () => {
@@ -18,7 +18,7 @@ const RecommendPage = () => {
   return (
     <>
       <LogoWrapper>
-        <Image src={"/HeaderRogo.png"} height={20} width={180} objectFit="cover" />
+        <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
       {isPopupOpen ? <PopupContents setOpen={setPopupOpen}/> : <></>}
       <ResultBody>
@@ -36,7 +36,7 @@ const RecommendPage = () => {
                 <PageButtonSpot onClick={onClick}>
                   <ButtonTextWrapper>神社周辺のおすすめスポット</ButtonTextWrapper>
                   <ImageWrapper>
-                    <Image src={"/Vector.png"} width={32} height={32} />
+                    <Image src={"/Utils/Vector.png"} width={32} height={32} />
                   </ImageWrapper>
                 </PageButtonSpot>
               </DetailWrapper>
@@ -44,7 +44,7 @@ const RecommendPage = () => {
                 <PageButtonIndex onClick={onClick}>
                   <ButtonTextWrapper>再診断する</ButtonTextWrapper>
                   <ImageWrapper>
-                    <Image src={"/Replay.png"} width={32} height={32} />
+                    <Image src={"/Utils/Replay.png"} width={32} height={32} />
                   </ImageWrapper>
                 </PageButtonIndex>
               </ButtonWrapper>
@@ -81,6 +81,7 @@ const ResultBody = styled.div`
 
 const LogoWrapper = styled.div`
   margin: 0;
+  left: 1%;
   z-index: 100;
   height: 5%;
   width: calc(100% - 16px);
