@@ -81,6 +81,10 @@ const ImageWrapper = styled.div`
   height: 62vh;
   min-width: 80vw;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    bottom: 15vh;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -88,7 +92,10 @@ const TitleWrapper = styled.div`
   top: 2vh;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2.5vw;
+
+  @media (max-width: 768px) {
+    top: 10vh;
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -99,17 +106,31 @@ const ButtonWrapper = styled.div`
   top: 47vh;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 768px) {
+    top: 50vh;
+  }
 `;
 
 const LeftTextWrapper = styled.div`
   position: absolute;
   top: 7vh;
   bottom: 6vh;
-  left: 22vw;
+  left: 21vw;
+
+  @media (max-width: 768px) {
+    top: 25vh;
+    left: 0vw;
+  }
 `;
 const RightTextWrapper = styled.div`
   position: absolute;
   top: 13vh;
   bottom: 7vh;
-  right: 22vw;
+  right: 21vw;
+
+  @media (max-width: 768px) {
+    top: 25vh;
+    right: 0vw;
+  }
 `;

@@ -11,4 +11,8 @@ const StyledTitle = styled.h1`
   font-size: 5.7vw;
   font-family: Kaisei HarunoUmi;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 6vh;
+  }
 `;

@@ -19,6 +19,10 @@ const StyledTitle = styled.h1`
   font-family: Noto Serif JP;
   font-weight: 500;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 5vw;
+  }
 `;
 const StyledLine = styled.div`
   border-left: 1px solid #070c0d;
