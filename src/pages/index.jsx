@@ -34,7 +34,7 @@ const IndexPage = () => {
       <AllWrapper>
         <Image src={"/Background.png"} layout="fill" />
         <ImageWrapper>
-          <Image src={"/title/torii-imge.svg"} width={800} height={720} />
+          <Image src={"/title/torii-imge.svg"} alt="鳥居" layout="fill" objectFit="contain" />
         </ImageWrapper>
         <TitleWrapper>
           <TitleText Text="みちびきおやしろ" />
@@ -74,34 +74,42 @@ const AllWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   position: absolute;
-  bottom: 9%;
+  bottom: 11vh;
   left: 50%;
   transform: translateX(-50%);
+  width: auto;
+  height: 62vh;
+  min-width: 80vw;
+  overflow: hidden;
 `;
 
 const TitleWrapper = styled.div`
   position: absolute;
-  top: 2%;
+  top: 2vh;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 2.5vw;
 `;
 
 const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 11%;
+  top: 47vh;
   left: 50%;
   transform: translateX(-50%);
 `;
 
 const LeftTextWrapper = styled.div`
   position: absolute;
-  top: 7%;
-  bottom: 6%;
-  left: 21%;
+  top: 7vh;
+  bottom: 6vh;
+  left: 22vw;
 `;
 const RightTextWrapper = styled.div`
   position: absolute;
-  top: 13%;
-  bottom: 7%;
-  right: 21%;
+  top: 13vh;
+  bottom: 7vh;
+  right: 22vw;
 `;

@@ -13,13 +13,13 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 54px;
+  font-size: 2.8vw;
   writing-mode: vertical-rl;
   white-space: nowrap;
   font-family: Noto Serif JP;
-  letter-spacing: 15px;
-  width: 180px;
-  height: 440px;
+  letter-spacing: 2vh;
+  width: 8vw;
+  height: 40vh;
   text-align: center;
   background-color: #6dc5c6;
   border: none;
@@ -27,14 +27,21 @@ const StyledButton = styled.button`
 
   &:hover {
     box-shadow: none;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 5vw;
+    width: 15vw;
+    height: 20vh;
+  }
 `;
 
 const StyledLine = styled.div`
   position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 15px;
-  right: 15px;
+  top: 1.8vh;
+  bottom: 1.8vh;
+  left: 1vw;
+  right: 1vw;
   border: 1px solid #070c0d;
 `;
 

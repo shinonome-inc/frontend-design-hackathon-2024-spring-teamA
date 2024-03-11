@@ -8,8 +8,7 @@ const StyledTitle = styled.h1`
   justify-content: center;
   display: flex;
   color: #070c0d;
-  font-size: 110px;
+  font-size: 5.7vw;
   font-family: Kaisei HarunoUmi;
-  font-weight: 300;
   white-space: nowrap;
 `;

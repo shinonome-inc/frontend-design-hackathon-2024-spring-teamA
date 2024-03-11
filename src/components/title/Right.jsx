@@ -14,8 +14,8 @@ const StyledTitle = styled.h1`
   writing-mode: vertical-rl;
   height: 100%;
   color: #070c0d;
-  font-size: 42px;
-  letter-spacing: 22px;
+  font-size: 3.6vh;
+  letter-spacing: 2.4vh;
   font-family: Noto Serif JP;
   font-weight: 500;
   white-space: nowrap;
