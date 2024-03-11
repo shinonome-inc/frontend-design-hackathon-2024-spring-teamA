@@ -5,6 +5,7 @@ import { colors } from "@/colors";
 import Image from "next/image";
 import Background from "./components/Background";
 import TitleText from "./components/TitleText";
+import ReturnButton from "./components/Button";
 
 const SpotsPage = () => {
   const router = useRouter();
@@ -17,6 +18,7 @@ const SpotsPage = () => {
     <>
       <Background>
         <TitleText />
+        <ReturnButton/>
       </Background>
     </>
   );
