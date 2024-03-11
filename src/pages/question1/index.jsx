@@ -75,6 +75,7 @@ const Question1Content = styled.div`
   border-radius: 20px;
   border: 5px solid #dcdcdc;
   background: #fff;
+  gap: 40px;
 `;
 
 const QuestionProgress = styled.div`
