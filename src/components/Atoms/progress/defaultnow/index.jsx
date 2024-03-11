@@ -27,6 +27,8 @@ const Marknow = styled.div`
   .img-nowmark {
     left: 0;
     position: absolute;
+    width: 40px;
+    height: 40px;
   }
 
   .img-nowmarkhover {
@@ -34,6 +36,8 @@ const Marknow = styled.div`
     left: 0;
     transition: opacity 0.7s;
     position: absolute;
+    width: 40px;
+    height: 40px;
   }
 
   .img-nowmarkhover:hover {

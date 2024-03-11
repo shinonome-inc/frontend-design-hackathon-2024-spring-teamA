@@ -1,5 +1,5 @@
-import { marklogo } from "./index";
+import { Marklogo } from "./index";
 
-export default { component: marklogo };
+export default { component: Marklogo };
 
 export const Default = {};

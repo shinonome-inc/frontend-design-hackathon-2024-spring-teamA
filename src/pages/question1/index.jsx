@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
 import { ChoiceNo } from "../../components/Atoms/choice/no";
+import Progressfirst from "../../components/Molecule/progress1";
 
 const Question1Page = () => {
   const router = useRouter();
@@ -19,7 +20,9 @@ const Question1Page = () => {
         <Question1TextWrapper>
           <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
         </Question1TextWrapper>
-        <QuestionProgress>アイコン</QuestionProgress>
+        <QuestionProgress>
+          <Progressfirst />
+        </QuestionProgress>
         <Question1Choices>
           <Button onClick={onClick}>
             <ChoiceYes />
@@ -36,10 +39,7 @@ const Question1Page = () => {
 export default Question1Page;
 
 const Question1Wrapper = styled.div`
-  background-image: url("/background.png");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url("/assets/background.png");
   width: 100%;
   height: 100%;
   position: absolute;
@@ -54,14 +54,6 @@ const HeaderLogo = styled.header`
 
 const LogoImage = styled.img`
   height: 40px;
-`;
-
-const Image = styled.img`
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  inset: 0px;
-  color: transparent;
 `;
 
 const Question1Content = styled.div`
@@ -80,7 +72,6 @@ const Question1Content = styled.div`
 
 const QuestionProgress = styled.div`
   display: flex;
-  width: 459px;
   justify-content: space-between;
   align-items: center;
 `;

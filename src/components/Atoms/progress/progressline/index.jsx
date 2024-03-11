@@ -11,5 +11,6 @@ export const Progressline = () => {
 export default Progressline;
 
 const LineMark = styled.div`
-  width: 116px;
+  width: 78px;
+  margin: auto;
 `;

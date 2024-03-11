@@ -14,5 +14,6 @@ export const Doneline = () => {
 export default Doneline;
 
 const DonelineMark = styled.div`
-  width: 116px;
+  width: 78px;
+  margin: auto;
 `;
