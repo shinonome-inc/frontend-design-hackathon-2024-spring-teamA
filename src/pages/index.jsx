@@ -103,7 +103,7 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 49vh;
+  top: 48vh;
   left: 50%;
   transform: translateX(-50%);
 

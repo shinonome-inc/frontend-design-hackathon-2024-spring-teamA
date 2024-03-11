@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   font-family: Noto Serif JP;
   letter-spacing: 2vh;
   width: 8vw;
-  height: 40vh;
+  height: 39vh;
   text-align: center;
   background-color: #6dc5c6;
   border: none;
