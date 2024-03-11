@@ -93,7 +93,7 @@ const Question1TextWrapper = styled.div`
 const Question1Text = styled.p`
   text-align: center;
   margin: 0 0 1px 0;
-  color: rgba(176, 176, 131, 1);
+  color: rgba(72, 72, 9, 1);
   font-size: 48px;
   font-family: serif;
 `;

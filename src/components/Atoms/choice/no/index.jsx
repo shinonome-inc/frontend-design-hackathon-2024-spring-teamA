@@ -11,7 +11,12 @@ export const ChoiceNo = () => {
   return (
     <Button onClick={onClick}>
       <ButtonContent>
-        <img src="/assets/nonhover.svg" alt="img-nonhover-no" />
+        <img
+          src="/assets/nonhover.svg"
+          alt="img-nonhover-no"
+          className="img-nonhover"
+        />
+        <img src="/assets/hover.svg" alt="img-hover-no" className="img-hover" />
         <ButtonText>いいえ</ButtonText>
       </ButtonContent>
     </Button>
@@ -26,16 +31,32 @@ const Button = styled.button`
   background: transparent;
   width: 333px;
   height: 308px;
+  padding: 0;
 `;
 
 const ButtonContent = styled.div`
   width: 330px;
   height: 330px;
   position: relative;
+  cursor: pointer;
 
-  :hover {
-    src="/assets/hover.svg"
-  };
+  .img-nonhover {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-hover {
+    opacity: 0;
+    left: 0;
+    transition: opacity 0.7s;
+    position: absolute;
+  }
+
+  .img-hover:hover {
+    opacity: 1;
+  }
 `;
 
 const ButtonText = styled.p`
