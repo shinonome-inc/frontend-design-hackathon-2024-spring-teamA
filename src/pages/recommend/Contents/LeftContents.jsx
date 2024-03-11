@@ -1,4 +1,4 @@
-import { paths } from "../../paths";
+import { paths } from "../../../paths";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { colors } from "@/colors";
@@ -68,29 +68,18 @@ const ButtonWrapper = styled.div`
   flex-direction: row;
 `;
 
-
-// const Location = styled.p`
-//   margin: 0;
-//   font-size: 64px;
-//   font-weight: Bold;
-//   font-family: "Noto Sans JP";
-//   color: ${colors.Black};
-// `;
-
-// const ExplanationText = styled.p`
-//   margin: 0;
-//   font-size: 42px;
-//   font-family: "Noto Sans JP";
-//   color: ${colors.Black};
-// `;
-
 const DetailLinkButton = styled.button`
   width: 50%;
   height: 50px;
+  min-width: 200px;
   text-align: center;
   border-radius: 25px;
   border: solid #217475 2px;
   color: #217475;
   font-family: serif;
   font-size: 24px;
+  @media (max-width: 300px) {
+    width: 100%;
+    min-width: 150px;
+  }
 `;

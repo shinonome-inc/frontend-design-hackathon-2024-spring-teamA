@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
-import LeftContents from "./LeftContents";
+import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupManager/PopupContents";
 import { useState } from "react";
 
@@ -68,7 +68,7 @@ const ResultBody = styled.div`
   > img {
     vertical-align: bottom;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 800px) {
     padding: 10% 3%;
     overflow-y: hidden;
   }
@@ -102,7 +102,6 @@ const AllWrapper = styled.div`
 const ContentWrapper = styled.div`
   z-index: 10;
   height: 100%;
-  justify-content: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0px;
@@ -122,31 +121,9 @@ const LeftExplanation = styled.div`
   }
 `;
 
-const CenterBelt = styled.div`
-  z-index: 20;
-  box-sizing: border-box;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  margin: auto;
-  flex-direction: column;
-  background-color: rgba(109, 197, 198, 0.8);
-  padding: 20px 0px;
-  > p {
-    font-family: serif;
-  }
-`;
-
 const MiddleText = styled.p`
   margin: 0;
   font-size: 36px;
-  width: 100%;
-  text-align: center;
-`;
-
-const ShrineNameText = styled.p`
-  margin: 0;
-  font-size: 64px;
   width: 100%;
   text-align: center;
 `;
@@ -155,17 +132,6 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: row;
-`;
-
-const DetailLinkButton = styled.button`
-  width: 50%;
-  height: 50px;
-  text-align: center;
-  border-radius: 25px;
-  border: solid #217475 2px;
-  color: #217475;
-  font-family: serif;
-  font-size: 24px;
 `;
 
 const RightExplanation = styled.div`
@@ -247,6 +213,7 @@ const PageButtonIndex = styled.button`
   gap: 16px;
 
   @media (max-width: 500px) {
+    width: 100%;
     min-width: 150px;
   }
 `;
