@@ -2,6 +2,8 @@ import { paths } from "../../paths";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
+import { ChoiceYes } from "../../components/Atoms/choice/yes";
+import { ChoiceNo } from "../../components/Atoms/choice/no";
 
 const Question1Page = () => {
   const router = useRouter();
@@ -15,11 +17,15 @@ const Question1Page = () => {
       </HeaderLogo>
       <Question1Content>
         <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
-        <Question1Choices>
-          <Button onClick={onClick}>はい</Button>
-          <Button onClick={onClick}>いいえ</Button>
-        </Question1Choices>
         <QuestionProgress>アイコン</QuestionProgress>
+        <Question1Choices>
+          <Button onClick={onClick}>
+            <ChoiceYes />
+          </Button>
+          <Button onClick={onClick}>
+            <ChoiceNo />
+          </Button>
+        </Question1Choices>
       </Question1Content>
     </Question1Wrapper>
   );
@@ -78,9 +84,9 @@ const QuestionProgress = styled.div`
 
 const Question1Text = styled.div``;
 
-const Question1Choices = styled.div``;
-
-const Button = styled.button`
-  width: 50%;
-  background-color: green;
+const Question1Choices = styled.div`
+  display: flex;
+  gap: 112px;
 `;
+
+const Button = styled.a``;
