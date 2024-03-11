@@ -13,10 +13,12 @@ const Question1Page = () => {
   return (
     <Question1Wrapper>
       <HeaderLogo>
-        <LogoImage src={"/logotitle.png"} />
+        <LogoImage src={"assets/logotitle.png"} />
       </HeaderLogo>
       <Question1Content>
-        <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
+        <Question1TextWrapper>
+          <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
+        </Question1TextWrapper>
         <QuestionProgress>アイコン</QuestionProgress>
         <Question1Choices>
           <Button onClick={onClick}>
@@ -67,7 +69,7 @@ const Question1Content = styled.div`
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  padding: 80px 140px;
+  padding: 80px 140px 160px;
   align-items: center;
   flex-shrink: 0;
   border-radius: 20px;
@@ -82,7 +84,18 @@ const QuestionProgress = styled.div`
   align-items: center;
 `;
 
-const Question1Text = styled.div``;
+const Question1TextWrapper = styled.div`
+  width: 900px;
+  border-bottom: solid 2px rgba(176, 176, 137, 1);
+`;
+
+const Question1Text = styled.p`
+  text-align: center;
+  margin: 0 0 1px 0;
+  color: rgba(176, 176, 131, 1);
+  font-size: 48px;
+  font-family: serif;
+`;
 
 const Question1Choices = styled.div`
   display: flex;
