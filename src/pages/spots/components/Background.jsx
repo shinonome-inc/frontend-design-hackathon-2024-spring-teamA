@@ -3,15 +3,17 @@ import { colors } from "@/colors";
 import Image from "next/image";
 import React from "react";
 
-const Background = ({children}) => {
+const Background = ({ children }) => {
   return (
     <>
       <LogoWrapper>
         <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
       <ResultBody>
-        <Image src={"/Background.png"} layout="fill" objectFit="fill" />
-        {children}
+        <AllWrapper>
+          <Image src={"/Background.png"} layout="fill" objectFit="fill" />
+          {children}
+        </AllWrapper>
       </ResultBody>
     </>
   );
@@ -49,4 +51,12 @@ const LogoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   position: absolute;
+`;
+
+const AllWrapper = styled.div`
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: solid #217475 5px;
 `;
