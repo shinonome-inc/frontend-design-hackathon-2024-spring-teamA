@@ -4,12 +4,13 @@ import { useRouter } from "next/router";
 const Question3Page = () => {
   const router = useRouter();
   const onClick = () => {
-    router.push(paths.recommend);
+    const eachPath = paths.recommend + "/garden";
+    router.push(eachPath);
   }
   return (
     <div>
       <h1>question3</h1>
-      <button onClick={onClick}>はい</button>
+      <button onClick={onClick}>{paths.recommend+"/garden"}</button>
     </div>
   );
 };
