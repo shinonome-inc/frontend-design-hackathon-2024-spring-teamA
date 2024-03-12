@@ -16,6 +16,7 @@ const Question1Page = () => {
       <HeaderLogo>
         <LogoImage src={"assets/logotitle.png"} />
       </HeaderLogo>
+      <Image src="/assets/background.png" />
       <Question1Content>
         <Question1TextWrapper>
           <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
@@ -39,7 +40,6 @@ const Question1Page = () => {
 export default Question1Page;
 
 const Question1Wrapper = styled.div`
-  background-image: url("/assets/background.png");
   width: 100%;
   height: 100%;
   position: absolute;
@@ -50,6 +50,10 @@ const HeaderLogo = styled.header`
   width: 100%;
   padding: 16px 24px;
   background-color: rgba(183, 205, 205, 1);
+`;
+
+const Image = styled.img`
+  width: 100%;
 `;
 
 const LogoImage = styled.img`
