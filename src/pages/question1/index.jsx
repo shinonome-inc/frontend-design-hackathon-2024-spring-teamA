@@ -2,6 +2,7 @@ import { paths } from "../../paths";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
 import { ChoiceNo } from "../../components/Atoms/choice/no";
 import Progressfirst from "../../components/Molecule/progress1";
@@ -12,11 +13,11 @@ const Question1Page = () => {
     router.push(paths.question2);
   };
   return (
-    <Question1Wrapper>
+    <>
       <HeaderLogo>
-        <LogoImage src={"assets/logotitle.png"} />
+        <Image src="/assets/logotitle.png" width={400} height={200} />
       </HeaderLogo>
-      <Image src="/assets/background.png" />
+      <Image src="/Background.png" layout="fill" />
       <Question1Content>
         <Question1TextWrapper>
           <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
@@ -33,31 +34,22 @@ const Question1Page = () => {
           </Button>
         </Question1Choices>
       </Question1Content>
-    </Question1Wrapper>
+    </>
   );
 };
 
 export default Question1Page;
 
-const Question1Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-`;
-
-const HeaderLogo = styled.header`
+const HeaderLogo = styled.div`
+  margin: 0;
+  left: 1%;
+  z-index: 100;
+  height: 5%;
+  width: calc(100% - 16px);
   display: flex;
-  width: 100%;
-  padding: 16px 24px;
-  background-color: rgba(183, 205, 205, 1);
-`;
-
-const Image = styled.img`
-  width: 100%;
-`;
-
-const LogoImage = styled.img`
-  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
 `;
 
 const Question1Content = styled.div`
@@ -65,7 +57,7 @@ const Question1Content = styled.div`
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  padding: 80px 140px 160px;
+  padding: 8px 14px 16px;
   align-items: center;
   flex-shrink: 0;
   border-radius: 20px;
@@ -83,6 +75,10 @@ const QuestionProgress = styled.div`
 const Question1TextWrapper = styled.div`
   width: 900px;
   border-bottom: solid 2px rgba(176, 176, 137, 1);
+
+  @media (max-width: 768px) {
+    width: 600px;
+  }
 `;
 
 const Question1Text = styled.p`
