@@ -18,13 +18,13 @@ const LineMark = styled.div`
   width: 50px;
   margin: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     width: 30px;
   }
   .progress-line {
     width: 50px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 950px) {
       width: 30px;
     }
   }

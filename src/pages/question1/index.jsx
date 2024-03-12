@@ -15,24 +15,28 @@ const Question1Page = () => {
   return (
     <>
       <HeaderLogo>
-        <Image src="/assets/logotitle.png" width={400} height={200} />
+        <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </HeaderLogo>
-      <Image src="/Background.png" layout="fill" />
       <Question1Content>
-        <Question1TextWrapper>
-          <Question1Text>新しい出会いに対して積極的ですか？</Question1Text>
-        </Question1TextWrapper>
-        <QuestionProgress>
-          <Progressfirst />
-        </QuestionProgress>
-        <Question1Choices>
-          <Button onClick={onClick}>
-            <ChoiceYes />
-          </Button>
-          <Button onClick={onClick}>
-            <ChoiceNo />
-          </Button>
-        </Question1Choices>
+        <AllWrapper>
+          <Image src="/Background.png" layout="fill" objectFit="fill" />
+          <ContentWrapper>
+            <Question1TextWrapper>
+              <Question1Text>新しい出会いに対して積極的ですか？</Question1Text>
+            </Question1TextWrapper>
+            <QuestionProgress>
+              <Progressfirst />
+            </QuestionProgress>
+            <Question1Choices>
+              <Button onClick={onClick}>
+                <ChoiceYes />
+              </Button>
+              <Button onClick={onClick}>
+                <ChoiceNo />
+              </Button>
+            </Question1Choices>
+          </ContentWrapper>
+        </AllWrapper>
       </Question1Content>
     </>
   );
@@ -53,32 +57,59 @@ const HeaderLogo = styled.div`
 `;
 
 const Question1Content = styled.div`
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: calc(100vh - 16px);
+  padding: 4% 13%;
+  > img {
+    vertical-align: bottom;
+  }
+  @media (max-width: 800px) {
+    padding: 10% 3%;
+    overflow-y: hidden;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+`;
+
+const AllWrapper = styled.div`
+  margin: 0;
+  height: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  position: fixed;
-  padding: 8px 14px 16px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 20px;
-  border: 5px solid rgba(219, 210, 188, 1);
-  background: #fff;
+`;
+
+const ContentWrapper = styled.div`
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  border: solid #eee4cb 5px;
+  border-radius: 5px;
+  overflow-y: auto;
+  background: rgba(250, 250, 250, 1);
+
+  @media (max-width: 600px) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+  }
 `;
 
 const QuestionProgress = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
 const Question1TextWrapper = styled.div`
-  width: 900px;
   border-bottom: solid 2px rgba(176, 176, 137, 1);
-
-  @media (max-width: 768px) {
-    width: 600px;
-  }
 `;
 
 const Question1Text = styled.p`
@@ -92,6 +123,16 @@ const Question1Text = styled.p`
 const Question1Choices = styled.div`
   display: flex;
   gap: 112px;
+  justify-content: center;
+  height: 330px;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
-const Button = styled.a``;
+const Button = styled.a`
+  @media (max-width: 768px) {
+    text-align: -webkit-center;
+  }
+`;

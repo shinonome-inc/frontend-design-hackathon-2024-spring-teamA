@@ -10,7 +10,7 @@ import Progresssecond from "../../components/Molecule/progress2";
 const Question2Page = () => {
   const router = useRouter();
   const onClick = () => {
-    router.push(paths.question2);
+    router.push(paths.question3);
   };
   return (
     <>

@@ -15,16 +15,16 @@ export const Doneline = () => {
 export default Doneline;
 
 const DonelineMark = styled.div`
-  width: 78px;
+  width: 50px;
   margin: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     width: 30px;
   }
   .progress-line-done {
     width: 50px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 950px) {
       width: 30px;
     }
   }
