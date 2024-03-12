@@ -11,6 +11,10 @@ import Spot from "./components/Spot";
 const SpotsPage = () => {
   const router = useRouter();
   const locationId = router.query.locationId;
+  window.addEventListener("beforeunload", function (event) {
+    event.preventDefault();
+    event.returnValue = "リロード禁止です！";
+  })
   let data = require("@/data/" + locationId);
   const onClick = () => {
     router.back();

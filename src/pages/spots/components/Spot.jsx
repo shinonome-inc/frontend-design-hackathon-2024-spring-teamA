@@ -4,12 +4,11 @@ import Image from "next/image";
 import { GlobalStyle } from "@/components/GlobalStyle";
 
 const Spot = ({ spot }) => {
-  //   const router = useRouter();
-  //   const locationId = router.query.locationId;
-  //   const onClick = ({ location }) => {
-  //     router.push(paths.index);
-      console.log(spot);
-  //   };
+  window.addEventListener("beforeunload", function (event) {
+    event.preventDefault();
+    event.returnValue = "リロード禁止です！";
+  })
+
   return (
     <AllWrapper>
       <SpotContent>

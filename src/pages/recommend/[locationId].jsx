@@ -13,7 +13,6 @@ const RecommendPage = () => {
   const locationId = router.query.locationId;
   let data = require("@/data/" + locationId);
 
-  // const data = JSON.parse(fs.readFileSync("@/data"+locationId+".json"));
   const returnTitle = () => {
     router.push(paths.index);
     console.log(router);
@@ -22,6 +21,11 @@ const RecommendPage = () => {
     router.push(paths.spots + "/" + locationId);
     console.log(router);
   };
+  window.addEventListener("beforeunload", function (event) {
+    event.preventDefault();
+    event.returnValue = "リロード禁止です！";
+  })
+
   return (
     <>
       <LogoWrapper>
