@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
 
-const ReturnButton = () => {
+const ReturnButton = ({onClick}) => {
   const router = useRouter();
   const locationId = router.query.locationId;
-  const onClick = () => {
-    router.push(paths.index);
-    console.log(router);
-  };
+  // const onClick = () => {
+  //   router.push(paths.index);
+  //   console.log(router);
+  // };
   return (
     <ButtonWrapper>
       <PageButtonIndex onClick={onClick}>

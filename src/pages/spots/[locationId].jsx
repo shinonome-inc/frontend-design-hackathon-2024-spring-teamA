@@ -12,7 +12,7 @@ const SpotsPage = () => {
   const router = useRouter();
   const locationId = router.query.locationId;
   const onClick = () => {
-    router.push(paths.index);
+    router.back();
     console.log(router);
   };
   return (
@@ -25,7 +25,7 @@ const SpotsPage = () => {
             <Spot spot={locationId} />
             <Spot spot={locationId} />
           </SpotsWrapper>
-          <ReturnButton />
+          <ReturnButton onClick={onClick}/>
         </SpotsContainerWrapper>
       </Background>
     </>
