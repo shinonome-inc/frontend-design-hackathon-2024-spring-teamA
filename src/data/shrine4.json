@@ -1,22 +1,22 @@
 {
     "Name": "厳島神社",
     "Benefit": "海運、交通安全、金運、必勝祈願",
-    "Explanation": "宇佐神宮、筥崎宮とともに日本三大八幡宮の一社であり、国宝に指定された完成度の高い神社建築を見ることができます。",
-    "PhotoLink": "/shrine/1/NIS190317002_TP_V4.jpg",
+    "Explanation": "松島・天橋立と並び日本三景「安芸の宮島」として知られ、平成8年にはユネスコの世界文化遺産に登録されています。",
+    "PhotoLink": "/shrine/4/29220622_s.jpg",
     "OutsideLink": "https://www.itsukushimajinja.jp/",
     "Spot1": {
-        "Name": "男山展望台",
-        "PhotoLink": "/shrine/4/5116621_s.jpg",
-        "Explanation": "桂川、宇治川、木津川の3つの川、西は天王山、東は比叡山や宇治の山並みを見渡すことができます。"
+        "Name": "宮島水族館",
+        "PhotoLink": "/shrine/4/img_floor01.png",
+        "Explanation": "瀬戸内海の生き物を中心に約350種類、13,000点以上の生き物を展示しています。"
     },
     "Spot2": {
-        "Name": "やわた走井餅老舗",
-        "PhotoLink": "/shrine/1/pict_13.jpg",
-        "Explanation": "刀の荒身を模した独特の形の走井餅が有名です。"
+        "Name": "あなごめしうえの",
+        "PhotoLink": "/shrine/4/img20180629133455510523.jpg",
+        "Explanation": "宮島のご当地グルメとして知られるあなごめしの発祥の店として知られる名店です。"
     },
     "Spot3": {
-        "Name": "安居橋",
-        "PhotoLink": "/shrine/1/2687621_s.jpg",
-        "Explanation": "大きく半円を描いた形は、別名「たいこ橋」と呼ばれています。"
+        "Name": "宮島参拝遊覧船",
+        "PhotoLink": "/shrine/4/slide-photo1.jpg",
+        "Explanation": "夜の厳島神社・大鳥居を間近に眺めるナイトクルーズを楽しめます。"
     }
 }
