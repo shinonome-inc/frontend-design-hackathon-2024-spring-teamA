@@ -1,22 +1,22 @@
 {
     "Name": "明治神宮",
-    "Benefit": "厄除け",
-    "Explanation": "宇佐神宮、筥崎宮とともに日本三大八幡宮の一社であり、国宝に指定された完成度の高い神社建築を見ることができます。",
-    "PhotoLink": "/shrine/3/NIS190317002_TP_V4.jpg",
-    "OutsideLink": "https://iwashimizu.or.jp/",
+    "Benefit": "厄除け、合格祈願、開運",
+    "Explanation": "明治天皇・昭憲皇太后をお祀りする神社で、清らかで森巌な内苑を中心に、聖徳記念絵画館を始め数多くの優れたスポーツ施設を持つ外苑と、明治記念館からなっています。",
+    "PhotoLink": "/shrine/3/3618226_s.jpg",
+    "OutsideLink": "https://www.meijijingu.or.jp/",
     "Spot1": {
-        "Name": "男山展望台",
-        "PhotoLink": "/shrine/3/5116621_s.jpg",
-        "Explanation": "桂川、宇治川、木津川の3つの川、西は天王山、東は比叡山や宇治の山並みを見渡すことができます。"
+        "Name": "代々木公園",
+        "PhotoLink": "/shrine/3/2140537_s.jpg",
+        "Explanation": "木陰の散策路はお散歩にぴったりです。"
     },
     "Spot2": {
-        "Name": "やわた走井餅老舗",
-        "PhotoLink": "/shrine/3/pict_13.jpg",
-        "Explanation": "刀の荒身を模した独特の形の走井餅が有名です。"
+        "Name": "玉笑",
+        "PhotoLink": "/shrine/3/s_0007.jpg",
+        "Explanation": "落ち着いた雰囲気の店内で、風味豊かな蕎麦を味わえます。"
     },
     "Spot3": {
-        "Name": "安居橋",
-        "PhotoLink": "/shrine/3/2687621_s.jpg",
-        "Explanation": "大きく半円を描いた形は、別名「たいこ橋」と呼ばれています。"
+        "Name": "明治神宮球場",
+        "PhotoLink": "/shrine/3/27881169_s.jpg",
+        "Explanation": "東京ヤクルトスワローズの本拠地です。"
     }
 }

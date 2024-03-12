@@ -1,12 +1,12 @@
 {
-    "Name": "石清水八幡宮",
-    "Benefit": "厄除け",
+    "Name": "厳島神社",
+    "Benefit": "海運、交通安全、金運、必勝祈願",
     "Explanation": "宇佐神宮、筥崎宮とともに日本三大八幡宮の一社であり、国宝に指定された完成度の高い神社建築を見ることができます。",
     "PhotoLink": "/shrine/1/NIS190317002_TP_V4.jpg",
-    "OutsideLink": "https://iwashimizu.or.jp/",
+    "OutsideLink": "https://www.itsukushimajinja.jp/",
     "Spot1": {
         "Name": "男山展望台",
-        "PhotoLink": "/shrine/1/5116621_s.jpg",
+        "PhotoLink": "/shrine/4/5116621_s.jpg",
         "Explanation": "桂川、宇治川、木津川の3つの川、西は天王山、東は比叡山や宇治の山並みを見渡すことができます。"
     },
     "Spot2": {
