@@ -1,0 +1,22 @@
+{
+    "Name": "明治神宮",
+    "Benefit": "厄除け、合格祈願、開運",
+    "Explanation": "明治天皇・昭憲皇太后をお祀りする神社で、清らかで森巌な内苑を中心に、聖徳記念絵画館を始め数多くの優れたスポーツ施設を持つ外苑と、明治記念館からなっています。",
+    "PhotoLink": "/shrine/3/3618226_s.jpg",
+    "OutsideLink": "https://www.meijijingu.or.jp/",
+    "Spot1": {
+        "Name": "代々木公園",
+        "PhotoLink": "/shrine/3/2140537_s.jpg",
+        "Explanation": "木陰の散策路はお散歩にぴったりです。"
+    },
+    "Spot2": {
+        "Name": "玉笑",
+        "PhotoLink": "/shrine/3/s_0007.jpg",
+        "Explanation": "落ち着いた雰囲気の店内で、風味豊かな蕎麦を味わえます。"
+    },
+    "Spot3": {
+        "Name": "明治神宮球場",
+        "PhotoLink": "/shrine/3/27881169_s.jpg",
+        "Explanation": "東京ヤクルトスワローズの本拠地です。"
+    }
+}
