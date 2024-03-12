@@ -1,22 +1,22 @@
 {
-    "Name": "石清水八幡宮",
-    "Benefit": "厄除け",
-    "Explanation": "宇佐神宮、筥崎宮とともに日本三大八幡宮の一社であり、国宝に指定された完成度の高い神社建築を見ることができます。",
-    "PhotoLink": "/shrine/1/NIS190317002_TP_V4.jpg",
-    "OutsideLink": "https://iwashimizu.or.jp/",
+    "Name": "鶴岡八幡宮",
+    "Benefit": "勝負運、出世、安産、縁結び",
+    "Explanation": "鎌倉幕府の初代将軍、源頼朝ゆかりの神社として約800年の歴史を持ち、流鏑馬や破魔矢の発祥としても知られいます。",
+    "PhotoLink": "/shrine/5/28171544_s.jpg",
+    "OutsideLink": "https://www.hachimangu.or.jp/",
     "Spot1": {
-        "Name": "男山展望台",
-        "PhotoLink": "/shrine/1/5116621_s.jpg",
-        "Explanation": "桂川、宇治川、木津川の3つの川、西は天王山、東は比叡山や宇治の山並みを見渡すことができます。"
+        "Name": "鎌倉国宝館",
+        "PhotoLink": "/shrine/5/7476.jpg",
+        "Explanation": "鎌倉の社寺に伝来する仏像や文化財を数多く保管・展示しています。"
     },
     "Spot2": {
-        "Name": "やわた走井餅老舗",
-        "PhotoLink": "/shrine/1/pict_13.jpg",
-        "Explanation": "刀の荒身を模した独特の形の走井餅が有名です。"
+        "Name": "茶寮 風の杜",
+        "PhotoLink": "/shrine/5/t_0nh0.jpg",
+        "Explanation": "一面に蓮が広がる平家池が見渡せる店内で甘味がいただけます。"
     },
     "Spot3": {
-        "Name": "安居橋",
-        "PhotoLink": "/shrine/1/2687621_s.jpg",
-        "Explanation": "大きく半円を描いた形は、別名「たいこ橋」と呼ばれています。"
+        "Name": "史跡法華堂跡",
+        "PhotoLink": "/shrine/5/2687621_s.jpg",
+        "Explanation": "源頼朝の墓と、北条義時の墓を見ることができます。"
     }
 }
