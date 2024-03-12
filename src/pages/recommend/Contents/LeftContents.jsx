@@ -5,13 +5,13 @@ import { colors } from "@/colors";
 import Image from "next/image";
 import { useEffect } from "react";
 
-const LeftContents = ({ locationId, setOpen }) => {
+const LeftContents = ({ name, setOpen }) => {
   return (
     <LeftExplanation>
       <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
       <CenterBelt>
         <MiddleText>あなたにおすすめの神社は</MiddleText>
-        <ShrineNameText>{locationId}</ShrineNameText>
+        <ShrineNameText>{name}</ShrineNameText>
         <ButtonWrapper>
           <DetailLinkButton onClick={() => { setOpen(true) }}>詳しく見る</DetailLinkButton>
         </ButtonWrapper>
