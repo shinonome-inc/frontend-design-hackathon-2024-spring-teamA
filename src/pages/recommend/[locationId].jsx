@@ -11,32 +11,39 @@ const RecommendPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const router = useRouter();
   const locationId = router.query.locationId;
+  let data = require("@/data/" + locationId);
+
   const returnTitle = () => {
     router.push(paths.index);
     console.log(router);
   };
   const goSpotsPage = () => {
-    router.push(paths.spots+"/"+locationId);
+    router.push(paths.spots + "/" + locationId);
     console.log(router);
   };
+  window.addEventListener("beforeunload", function (event) {
+    event.preventDefault();
+    event.returnValue = "リロード禁止です！";
+  })
+
   return (
     <>
       <LogoWrapper>
         <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
-      {isPopupOpen ? <PopupContents setOpen={setPopupOpen}/> : <></>}
+      {isPopupOpen ? <PopupContents setOpen={setPopupOpen} /> : <></>}
       <ResultBody>
         <AllWrapper>
           <Image src={"/Background.png"} layout="fill" objectFit="fill" />
           <ContentWrapper>
             <LeftExplanation>
-              <LeftContents locationId={locationId} setOpen={setPopupOpen} />
+              <LeftContents name={data.Name} photo={data.PhotoLink} setOpen={setPopupOpen} />
             </LeftExplanation>
             <RightExplanation>
               <DetailWrapper>
                 <MiddleText>この神社の御利益は...</MiddleText>
-                <BenefitTitle>{locationId}</BenefitTitle>
-                <DetailExplanation>{locationId}</DetailExplanation>
+                <BenefitTitle>{data.Benefit}</BenefitTitle>
+                <DetailExplanation>{data.Explanation}</DetailExplanation>
                 <PageButtonSpot onClick={goSpotsPage}>
                   <ButtonTextWrapper>神社周辺のおすすめスポット</ButtonTextWrapper>
                   <ImageWrapper>
@@ -93,7 +100,6 @@ const LogoWrapper = styled.div`
   justify-content: center;
   position: absolute;
 `;
-
 
 const AllWrapper = styled.div`
   margin: 0;

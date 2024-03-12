@@ -3,48 +3,58 @@ import { colors } from "@/colors";
 import Image from "next/image";
 import { GlobalStyle } from "@/components/GlobalStyle";
 
-const Spot = ({spot}) => {
-//   const router = useRouter();
-//   const locationId = router.query.locationId;
-//   const onClick = ({ location }) => {
-//     router.push(paths.index);
-//     console.log(router);
-//   };
+const Spot = ({ spot }) => {
+  window.addEventListener("beforeunload", function (event) {
+    event.preventDefault();
+    event.returnValue = "リロード禁止です！";
+  })
+
   return (
-    <>
+    <AllWrapper>
       <SpotContent>
         <ImageWrapper>
-          <Image src={"/Kyoto.jpg"} layout="fill" objectFit="cover" />
+          <Image src={spot.PhotoLink} layout="fill" objectFit="cover" />
         </ImageWrapper>
         <TextWrapper>
           <GlobalStyle />
-          <SpotName>オムライス</SpotName>
-          <SpotExplanation>{spot}</SpotExplanation>
+          <SpotName>{spot.Name}</SpotName>
+          <SpotExplanation>{spot.Explanation}</SpotExplanation>
         </TextWrapper>
       </SpotContent>
-    </>
+    </AllWrapper>
   );
 };
 export default Spot;
 
+const AllWrapper = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+
 const SpotContent = styled.div`
-  display: grid;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   width: 100%;
   height: 100%;
   gap: 0px;
-  grid-template-rows: repeat(2, 1fr);
   border-radius: 50px;
   min-height: 400px;
+  inline-size: 100%;
+  word-break: break-all;
 `;
 
 const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
   margin: 0;
-  position: relative;
 `;
 
 const TextWrapper = styled.div`
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -54,6 +64,8 @@ const TextWrapper = styled.div`
   flex-direction: column;
   gap: 5px;
   border-radius: 0px 0px 10px 10px;
+  inline-size: 100%;
+  word-break: break-all;
 `;
 
 const SpotName = styled.div`
@@ -61,14 +73,18 @@ const SpotName = styled.div`
   width: 100%;
   font-family: Noto Serif JP;
   font-weight: bold;
-  white-space: nowrap;
   font-size: 40px;
+  position: relative;
+  inline-size: 100%;
+  word-break: break-all;
 `;
 
 const SpotExplanation = styled.div`
   margin: 0;
   width: 100%;
+  height: 100%;
   font-family: Noto Serif JP;
-  white-space: nowrap;
   font-size: 28px;
+  inline-size: 100%;
+  word-break: break-all;
 `;

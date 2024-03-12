@@ -18,7 +18,7 @@ const DiagnosisPage = () => {
 
   setTimeout(() => {
     setImageShow(getImageShow + 1);
-    if (getImageShow > 2) {
+    if (getImageShow > 4) {
       goNextPage();
     }
   }, "2500");
