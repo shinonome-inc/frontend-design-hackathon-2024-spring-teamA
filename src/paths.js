@@ -5,4 +5,5 @@ export const paths = {
   question3: "/question3",
   recommend: "/recommend",
   spots: "/spots",
+  diagnosis: "/diagnosis",
 };

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 const Question3Page = () => {
   const router = useRouter();
   const onClick = () => {
-    const eachPath = paths.recommend + "/garden";
+    const eachPath = paths.diagnosis + "/garden";
     router.push(eachPath);
   }
   return (
