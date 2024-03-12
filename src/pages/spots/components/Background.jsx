@@ -25,14 +25,14 @@ const ResultBody = styled.div`
   top: 0;
   left: 0;
   bottom: 0;
-  height: calc(100vh - 16px);
+  height: 100%;
   padding: 10%;
   > img {
     vertical-align: bottom;
   }
   @media (max-width: 800px) {
     padding: 10% 3%;
-    overflow-y: hidden;
+    overflow: hidden;
   }
   ::-webkit-scrollbar {
     display: none;
@@ -59,4 +59,5 @@ const AllWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border: solid #217475 5px;
+  overflow-y: scroll;
 `;

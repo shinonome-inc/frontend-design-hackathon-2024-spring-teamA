@@ -16,7 +16,7 @@ const SpotsPage = () => {
     console.log(router);
   };
   return (
-    <>
+    <AllWrapper>
       <Background>
         <SpotsContainerWrapper>
           <TitleText />
@@ -25,23 +25,32 @@ const SpotsPage = () => {
             <Spot spot={locationId} />
             <Spot spot={locationId} />
           </SpotsWrapper>
-          <ReturnButton onClick={onClick}/>
+          <ReturnButton onClick={onClick} />
         </SpotsContainerWrapper>
       </Background>
-    </>
+    </AllWrapper>
   );
 };
 export default SpotsPage;
+
+const AllWrapper = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+`;
 
 const SpotsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100%;
   gap: 2%;
-  overflow-y: auto;
+  overflow-y: scroll;
 
-  @media(max-width: 600px){
+  @media (max-width: 600px) {
     flex-direction: column;
   }
 `;
@@ -51,9 +60,6 @@ const SpotsContainerWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  gap:24px;
-
-  @media(max-width: 600px){
-    min-height: 400px;
-  }
+  gap: 24px;
+  overflow-y: scroll;
 `;

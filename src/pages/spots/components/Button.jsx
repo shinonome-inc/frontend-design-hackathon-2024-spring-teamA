@@ -28,7 +28,8 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: row;
-  z-index: 1;
+  z-index: 5;
+  position: relative;
 `;
 
 const PageButtonIndex = styled.button`

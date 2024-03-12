@@ -31,7 +31,6 @@ const SpotContent = styled.div`
   display: grid;
   width: 100%;
   height: 100%;
-  z-index: 2;
   gap: 0px;
   grid-template-rows: repeat(2, 1fr);
   border-radius: 50px;
@@ -41,7 +40,6 @@ const SpotContent = styled.div`
 const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
-  z-index: 3;
   margin: 0;
   position: relative;
 `;
@@ -49,7 +47,7 @@ const ImageWrapper = styled.div`
 const TextWrapper = styled.div`
   height: 100%;
   width: 100%;
-  z-index: 3;
+  z-index: 1;
   margin: 0;
   background-color: ${colors.Write};
   display: flex;
