@@ -4,4 +4,5 @@ export const paths = {
   question2: "/question2",
   question3: "/question3",
   recommend: "/recommend",
+  spots: "/spots",
 };

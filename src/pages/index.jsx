@@ -1,23 +1,13 @@
 import { paths } from "../paths";
 import { useRouter } from "next/router";
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import Image from "next/image";
 import { Button } from "../components/title/Button";
 import { TitleText } from "../components/title/Title";
 import { LeftText } from "../components/title/Left";
 import { RightText } from "../components/title/Right";
-
-const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: "Kaisei HarunoUmi";
-    src: url("/fonts/KaiseiHarunoUmi-Bold.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Noto Serif JP";
-    src: url("/fonts/NotoSerifJP-Medium.otf") format("opentype");
-  }
-`;
+import { GlobalStyle } from "../components/GlobalStyle";
 
 const IndexPage = () => {
   const router = useRouter();

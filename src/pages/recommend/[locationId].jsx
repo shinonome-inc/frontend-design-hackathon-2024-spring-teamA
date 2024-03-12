@@ -11,8 +11,12 @@ const RecommendPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const router = useRouter();
   const locationId = router.query.locationId;
-  const onClick = () => {
+  const returnTitle = () => {
     router.push(paths.index);
+    console.log(router);
+  };
+  const goSpotsPage = () => {
+    router.push(paths.spots+"/"+locationId);
     console.log(router);
   };
   return (
@@ -33,7 +37,7 @@ const RecommendPage = () => {
                 <MiddleText>この神社の御利益は...</MiddleText>
                 <BenefitTitle>{locationId}</BenefitTitle>
                 <DetailExplanation>{locationId}</DetailExplanation>
-                <PageButtonSpot onClick={onClick}>
+                <PageButtonSpot onClick={goSpotsPage}>
                   <ButtonTextWrapper>神社周辺のおすすめスポット</ButtonTextWrapper>
                   <ImageWrapper>
                     <Image src={"/Utils/Vector.png"} width={32} height={32} />
@@ -41,7 +45,7 @@ const RecommendPage = () => {
                 </PageButtonSpot>
               </DetailWrapper>
               <ButtonWrapper>
-                <PageButtonIndex onClick={onClick}>
+                <PageButtonIndex onClick={returnTitle}>
                   <ButtonTextWrapper>再診断する</ButtonTextWrapper>
                   <ImageWrapper>
                     <Image src={"/Utils/Replay.png"} width={32} height={32} />
@@ -55,7 +59,6 @@ const RecommendPage = () => {
     </>
   );
 };
-
 export default RecommendPage;
 
 const ResultBody = styled.div`
