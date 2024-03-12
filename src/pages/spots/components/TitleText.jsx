@@ -19,9 +19,13 @@ const TextWrapper = styled.div`
   z-index: 1;
 `;
 
-const Text = styled.h1`
+const Text = styled.div`
+  margin: 0;
   font-weight: bold;
-  font-size: 60;
+  font-size: 50px;
   font-family: Noto Serif JP;
   text-align: center;
+  @media(max-width: 600px){
+    font-size: 40px;
+  }
 `;
