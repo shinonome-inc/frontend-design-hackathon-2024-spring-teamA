@@ -1,0 +1,22 @@
+{
+    "Name": "石清水八幡宮",
+    "Benefit": "厄除け",
+    "Explanation": "宇佐神宮、筥崎宮とともに日本三大八幡宮の一社であり、国宝に指定された完成度の高い神社建築を見ることができます。",
+    "PhotoLink": "/shrine/1/NIS190317002_TP_V4.jpg",
+    "OutsideLink": "https://iwashimizu.or.jp/",
+    "Spot1": {
+        "Name": "男山展望台",
+        "PhotoLink": "/shrine/1/5116621_s.jpg",
+        "Explanation": "桂川、宇治川、木津川の3つの川、西に天王山、東に比叡山を見渡すことができます。"
+    },
+    "Spot2": {
+        "Name": "やわた走井餅老舗",
+        "PhotoLink": "/shrine/1/pict_13.jpg",
+        "Explanation": "刀の荒身を模した独特の形の走井餅が有名です。"
+    },
+    "Spot3": {
+        "Name": "安居橋",
+        "PhotoLink": "/shrine/1/2687621_s.jpg",
+        "Explanation": "大きく半円を描いた形は、別名「たいこ橋」と呼ばれています。"
+    }
+}
