@@ -1,22 +1,22 @@
 {
-    "Name": "石清水八幡宮",
-    "Benefit": "厄除け",
-    "Explanation": "宇佐神宮、筥崎宮とともに日本三大八幡宮の一社であり、国宝に指定された完成度の高い神社建築を見ることができます。",
-    "PhotoLink": "/shrine/1/NIS190317002_TP_V4.jpg",
-    "OutsideLink": "https://iwashimizu.or.jp/",
+    "Name": "熱田神宮",
+    "Benefit": "家内安全、無病息災、縁結び、商売繁盛、合格祈願",
+    "Explanation": "天皇家に代々継承されている秘宝である三種の神器のひとつ、草薙神剣を祀っています。",
+    "PhotoLink": "/shrine/6/about_idx_mainimage.jpg",
+    "OutsideLink": "https://www.atsutajingu.or.jp/",
     "Spot1": {
-        "Name": "男山展望台",
-        "PhotoLink": "/shrine/1/5116621_s.jpg",
-        "Explanation": "桂川、宇治川、木津川の3つの川、西は天王山、東は比叡山や宇治の山並みを見渡すことができます。"
+        "Name": "草薙館",
+        "PhotoLink": "/shrine/6/94958838462e9d81e96f14.jpg",
+        "Explanation": "名刀鑑賞の他、実際の日本刀や真柄大太刀の大きさ、重量を実感できる体験コーナーもあります。"
     },
     "Spot2": {
-        "Name": "やわた走井餅老舗",
-        "PhotoLink": "/shrine/1/pict_13.jpg",
-        "Explanation": "刀の荒身を模した独特の形の走井餅が有名です。"
+        "Name": "あつた蓬莱軒",
+        "PhotoLink": "/shrine/6/img_menu2_1.jpg",
+        "Explanation": "名古屋名物のひつまぶしを楽しむことができます。"
     },
     "Spot3": {
-        "Name": "安居橋",
-        "PhotoLink": "/shrine/1/2687621_s.jpg",
-        "Explanation": "大きく半円を描いた形は、別名「たいこ橋」と呼ばれています。"
+        "Name": "七里の渡し跡",
+        "PhotoLink": "/shrine/6/sitirinowatasi.jpg",
+        "Explanation": "東海道五十三次のうち宮宿から、次の宿場である桑名宿に行く海路の七里の渡しの跡です。"
     }
 }
