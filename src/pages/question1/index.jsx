@@ -20,7 +20,7 @@ const Question1Page = () => {
       <Image src="/Background.png" layout="fill" />
       <Question1Content>
         <Question1TextWrapper>
-          <Question1Text>1人で過ごすほうが気楽でいい</Question1Text>
+          <Question1Text>新しい出会いに対して積極的ですか？</Question1Text>
         </Question1TextWrapper>
         <QuestionProgress>
           <Progressfirst />
@@ -61,7 +61,7 @@ const Question1Content = styled.div`
   align-items: center;
   flex-shrink: 0;
   border-radius: 20px;
-  border: 5px solid #dcdcdc;
+  border: 5px solid rgba(219, 210, 188, 1);
   background: #fff;
   gap: 40px;
 `;
