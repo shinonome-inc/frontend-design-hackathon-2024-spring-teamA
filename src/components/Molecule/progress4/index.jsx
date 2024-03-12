@@ -20,8 +20,6 @@ export const Progressfourth = () => {
       <Marklogo />
       <Progressline />
       <Marklogo />
-      <Progressline />
-      <Marklogo />
     </ProgressfourthWrapper>
   );
 };

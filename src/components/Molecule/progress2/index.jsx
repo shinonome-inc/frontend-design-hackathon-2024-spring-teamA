@@ -20,8 +20,6 @@ export const Progresssecond = () => {
       <Marklogo />
       <Progressline />
       <Marklogo />
-      <Progressline />
-      <Marklogo />
     </ProgresssecondWrapper>
   );
 };

@@ -18,8 +18,6 @@ export const Progressfirst = () => {
       <Marklogo />
       <Progressline />
       <Marklogo />
-      <Progressline />
-      <Marklogo />
     </ProgressfirstWrapper>
   );
 };

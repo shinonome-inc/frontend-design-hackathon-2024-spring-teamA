@@ -20,8 +20,6 @@ export const Progresssixth = () => {
       <MarklogoDone />
       <Doneline />
       <MarklogoNow />
-      <Progressline />
-      <Marklogo />
     </ProgresssixthWrapper>
   );
 };

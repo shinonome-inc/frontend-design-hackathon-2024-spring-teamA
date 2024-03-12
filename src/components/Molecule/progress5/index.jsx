@@ -20,8 +20,6 @@ export const Progressfifth = () => {
       <MarklogoNow />
       <Progressline />
       <Marklogo />
-      <Progressline />
-      <Marklogo />
     </ProgressfifthWrapper>
   );
 };
