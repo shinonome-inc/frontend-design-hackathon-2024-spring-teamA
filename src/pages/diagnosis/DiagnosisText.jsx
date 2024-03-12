@@ -25,7 +25,7 @@ const TextWrapper = styled.div`
   z-index: 1;
   width: 100%;
   position: relative;
-  top: 70%;
+  top: 50%;
 `;
 
 const Text = styled.div`
