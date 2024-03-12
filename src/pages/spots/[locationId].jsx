@@ -47,6 +47,7 @@ const SpotsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100%;
   gap: 2%;
   overflow-y: scroll;
 
@@ -61,5 +62,7 @@ const SpotsContainerWrapper = styled.div`
   width: 100%;
   height: 100%;
   gap: 24px;
-  overflow-y: scroll;
+  @media (max-width: 600px) {
+    overflow-y: scroll;
+  }
 `;
