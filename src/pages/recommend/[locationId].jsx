@@ -6,7 +6,6 @@ import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupContents/index";
 import { useState } from "react";
-import { shrine2 } from "@/data/shrine2";
 
 const RecommendPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -20,7 +19,7 @@ const RecommendPage = () => {
     console.log(router);
   };
   const goSpotsPage = () => {
-    router.push(paths.spots+"/"+locationId);
+    router.push(paths.spots + "/" + locationId);
     console.log(router);
   };
   return (
@@ -28,13 +27,13 @@ const RecommendPage = () => {
       <LogoWrapper>
         <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
-      {isPopupOpen ? <PopupContents setOpen={setPopupOpen}/> : <></>}
+      {isPopupOpen ? <PopupContents setOpen={setPopupOpen} /> : <></>}
       <ResultBody>
         <AllWrapper>
           <Image src={"/Background.png"} layout="fill" objectFit="fill" />
           <ContentWrapper>
             <LeftExplanation>
-              <LeftContents name={data.Name} setOpen={setPopupOpen} />
+              <LeftContents name={data.Name} photo={data.PhotoLink} setOpen={setPopupOpen} />
             </LeftExplanation>
             <RightExplanation>
               <DetailWrapper>
@@ -97,7 +96,6 @@ const LogoWrapper = styled.div`
   justify-content: center;
   position: absolute;
 `;
-
 
 const AllWrapper = styled.div`
   margin: 0;

@@ -11,6 +11,7 @@ import Spot from "./components/Spot";
 const SpotsPage = () => {
   const router = useRouter();
   const locationId = router.query.locationId;
+  let data = require("@/data/" + locationId);
   const onClick = () => {
     router.back();
     console.log(router);
@@ -21,9 +22,15 @@ const SpotsPage = () => {
         <SpotsContainerWrapper>
           <TitleText />
           <SpotsWrapper>
-            <Spot spot={locationId} />
-            <Spot spot={locationId} />
-            <Spot spot={locationId} />
+            <EachWrapper>
+              <Spot spot={data.Spot1} />
+            </EachWrapper>
+            <EachWrapper>
+              <Spot spot={data.Spot2} />
+            </EachWrapper>
+            <EachWrapper>
+              <Spot spot={data.Spot3} />
+            </EachWrapper>
           </SpotsWrapper>
           <ReturnButton onClick={onClick} />
         </SpotsContainerWrapper>
@@ -43,19 +50,6 @@ const AllWrapper = styled.div`
   overflow-y: hidden;
 `;
 
-const SpotsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  gap: 2%;
-  overflow-y: scroll;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
-`;
-
 const SpotsContainerWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -65,4 +59,24 @@ const SpotsContainerWrapper = styled.div`
   @media (max-width: 600px) {
     overflow-y: scroll;
   }
+`;
+
+const SpotsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  gap: 2%;
+  overflow-y: scroll;
+
+  @media (max-width: 600px) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: none;
+  }
+`;
+
+const EachWrapper = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 `;
