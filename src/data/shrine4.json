@@ -1,0 +1,22 @@
+{
+    "Name": "厳島神社",
+    "Benefit": "海運、交通安全、金運、必勝祈願",
+    "Explanation": "松島・天橋立と並び日本三景「安芸の宮島」として知られ、平成8年にはユネスコの世界文化遺産に登録されています。",
+    "PhotoLink": "/shrine/4/29220622_s.jpg",
+    "OutsideLink": "https://www.itsukushimajinja.jp/",
+    "Spot1": {
+        "Name": "宮島水族館",
+        "PhotoLink": "/shrine/4/img_floor01.png",
+        "Explanation": "瀬戸内海の生き物を中心に約350種類、13,000点以上の生き物を展示しています。"
+    },
+    "Spot2": {
+        "Name": "あなごめしうえの",
+        "PhotoLink": "/shrine/4/img20180629133455510523.jpg",
+        "Explanation": "宮島のご当地グルメとして知られるあなごめしの発祥の店として知られる名店です。"
+    },
+    "Spot3": {
+        "Name": "宮島参拝遊覧船",
+        "PhotoLink": "/shrine/4/slide-photo1.jpg",
+        "Explanation": "夜の厳島神社・大鳥居を間近に眺めるナイトクルーズを楽しめます。"
+    }
+}
