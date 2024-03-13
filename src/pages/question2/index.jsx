@@ -25,11 +25,26 @@ const Question2Page = () => {
     shrine5: Number(router.query.shrine5),
     shrine6: Number(router.query.shrine6),
   };
+  console.log(router.query);
   const onClickYes = () => {
-    router.push({ pathname: paths.question3, query: queryYes }, paths.question3);
+    router.push({ pathname: paths.question3, query: {
+      shrine1: Number(router.query.shrine1),
+      shrine2: Number(router.query.shrine2),
+      shrine3: Number(router.query.shrine3) + 1,
+      shrine4: Number(router.query.shrine4) + 1,
+      shrine5: Number(router.query.shrine5) + 1,
+      shrine6: Number(router.query.shrine6) + 1,
+    } }, paths.question3);
   };
   const onClickNo = () => {
-    router.push({ pathname: paths.question3, query: queryNo }, paths.question3);
+    router.push({ pathname: paths.question3, query: {
+      shrine1: Number(router.query.shrine1) + 1,
+      shrine2: Number(router.query.shrine2) + 1,
+      shrine3: Number(router.query.shrine3),
+      shrine4: Number(router.query.shrine4),
+      shrine5: Number(router.query.shrine5),
+      shrine6: Number(router.query.shrine6),
+    } }, paths.question3);
   };
   
   return (
