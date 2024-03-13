@@ -90,7 +90,7 @@ const Question3Page = () => {
   // };
 
   const onClickYes = () => {
-    const maxIndex = Object.values(queryYes).indexOf(Math.max(...Object.values(queryYes)));
+    const maxIndex = Object.values(queryYes).indexOf(Math.max(...Object.values(queryYes))) + 1;
     console.log(queryYes);
     console.log(Math.max(...Object.values(queryYes)));
     const query = "shrine" + String(maxIndex);
@@ -100,7 +100,7 @@ const Question3Page = () => {
     router.push(eachPath);
   };
   const onClickNo = () => {
-    const maxIndex = Object.values(queryNo).indexOf(Math.max(...Object.values(queryNo)));
+    const maxIndex = Object.values(queryNo).indexOf(Math.max(...Object.values(queryNo))) + 1;
     const query = "shrine" + String(maxIndex);
     console.log(query);
     setTimeout(() => {}, "2500");
