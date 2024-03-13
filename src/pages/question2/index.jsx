@@ -9,9 +9,29 @@ import Progresssecond from "../../components/Molecule/progress2";
 
 const Question2Page = () => {
   const router = useRouter();
-  const onClick = () => {
-    router.push(paths.question3);
+  const queryYes = {
+    shrine1: Number(router.query.shrine1),
+    shrine2: Number(router.query.shrine2),
+    shrine3: Number(router.query.shrine3) + 1,
+    shrine4: Number(router.query.shrine4) + 1,
+    shrine5: Number(router.query.shrine5) + 1,
+    shrine6: Number(router.query.shrine6) + 1,
   };
+  const queryNo = {
+    shrine1: Number(router.query.shrine1) + 1,
+    shrine2: Number(router.query.shrine2) + 1,
+    shrine3: Number(router.query.shrine3),
+    shrine4: Number(router.query.shrine4),
+    shrine5: Number(router.query.shrine5),
+    shrine6: Number(router.query.shrine6),
+  };
+  const onClickYes = () => {
+    router.push({ pathname: paths.question3, query: queryYes }, paths.question3);
+  };
+  const onClickNo = () => {
+    router.push({ pathname: paths.question3, query: queryNo }, paths.question3);
+  };
+  
   return (
     <>
       <HeaderLogo>
@@ -22,18 +42,16 @@ const Question2Page = () => {
           <Image src="/Background.png" layout="fill" objectFit="fill" />
           <ContentWrapper>
             <Question2TextWrapper>
-              <Question2Text>
-                仕事や学業で成果を出したいと思っていますか？
-              </Question2Text>
+              <Question2Text>仕事や学業で成果を出したいと思っていますか？</Question2Text>
             </Question2TextWrapper>
             <QuestionProgress>
               <Progresssecond />
             </QuestionProgress>
             <Question2Choices>
-              <Button onClick={onClick}>
+              <Button onClick={onClickYes}>
                 <ChoiceYes />
               </Button>
-              <Button onClick={onClick}>
+              <Button onClick={onClickNo}>
                 <ChoiceNo />
               </Button>
             </Question2Choices>

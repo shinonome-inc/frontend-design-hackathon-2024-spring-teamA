@@ -9,9 +9,29 @@ import Progressfirst from "../../components/Molecule/progress1";
 
 const Question1Page = () => {
   const router = useRouter();
-  const onClick = () => {
-    router.push(paths.question2);
+  const queryYes = {
+    shrine1: 0,
+    shrine2: 0,
+    shrine3: 1,
+    shrine4: 0,
+    shrine5: 1,
+    shrine6: 1,
   };
+  const queryNo = {
+    shrine1: 1,
+    shrine2: 1,
+    shrine3: 0,
+    shrine4: 1,
+    shrine5: 0,
+    shrine6: 0,
+  };
+  const onClickYes = () => {
+    router.push({ pathname: paths.question2, query: queryYes }, paths.question2);
+  };
+  const onClickNo = () => {
+    router.push({ pathname: paths.question2, query: queryNo }, paths.question2);
+  };
+
   return (
     <>
       <HeaderLogo>
@@ -28,10 +48,10 @@ const Question1Page = () => {
               <Progressfirst />
             </QuestionProgress>
             <Question1Choices>
-              <Button onClick={onClick}>
+              <Button onClick={onClickYes}>
                 <ChoiceYes />
               </Button>
-              <Button onClick={onClick}>
+              <Button onClick={onClickNo}>
                 <ChoiceNo />
               </Button>
             </Question1Choices>
