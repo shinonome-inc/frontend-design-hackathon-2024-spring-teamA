@@ -26,32 +26,18 @@ const Question3Page = () => {
     shrine5: Number(router.query.shrine5),
     shrine6: Number(router.query.shrine6),
   };
-  // const onClickYes = () => {
-  //   const query = [...queryYes];
-  //   console.log(query);
-  //   router.push({ pathname: paths.question3, query: queryYes }, paths.question3);
-  // };
-  // const onClickNo = () => {
-  //   router.push({ pathname: paths.question3, query: queryNo }, paths.question3);
-  // };
 
   const onClickYes = () => {
     const maxIndex = Object.values(queryYes).indexOf(Math.max(...Object.values(queryYes))) + 1;
-    console.log(queryYes);
-    console.log(Math.max(...Object.values(queryYes)));
     const query = "shrine" + String(maxIndex);
-    console.log(query);
     setTimeout(() => {}, "2500");
-    const eachPath = paths.diagnosis + "/" + query;
-    router.push(eachPath);
+    router.push({ pathname: paths.diagnosis, query: {locationId: query } }, paths.diagnosis);
   };
   const onClickNo = () => {
     const maxIndex = Object.values(queryNo).indexOf(Math.max(...Object.values(queryNo))) + 1;
     const query = "shrine" + String(maxIndex);
-    console.log(query);
-    setTimeout(() => {}, "2500");
-    const eachPath = paths.diagnosis + "/" + query;
-    router.push(eachPath);
+    router.push({ pathname: paths.diagnosis, query: {locationId: query } }, paths.diagnosis);
+
   };
   return (
     <>

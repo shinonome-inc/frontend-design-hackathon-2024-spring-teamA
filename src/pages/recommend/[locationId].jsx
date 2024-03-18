@@ -15,11 +15,9 @@ const RecommendPage = () => {
 
   const returnTitle = () => {
     router.push(paths.index);
-    console.log(router);
   };
   const goSpotsPage = () => {
     router.push(paths.spots + "/" + locationId);
-    console.log(router);
   };
   window.addEventListener("beforeunload", function (event) {
     event.preventDefault();

@@ -9,24 +9,7 @@ import Progress from "../../components/Molecule/progress";
 
 const Question1Page = () => {
   const router = useRouter();
-  const queryYes = {
-    shrine1: 0,
-    shrine2: 0,
-    shrine3: 1,
-    shrine4: 0,
-    shrine5: 1,
-    shrine6: 1,
-  };
-  const queryNo = {
-    shrine1: 1,
-    shrine2: 1,
-    shrine3: 0,
-    shrine4: 1,
-    shrine5: 0,
-    shrine6: 0,
-  };
   const onClickYes = () => {
-    console.log(...Object.values(queryYes));
     router.push({ pathname: paths.question2, query: {
       shrine1: 0,
       shrine2: 0,

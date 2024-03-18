@@ -13,7 +13,6 @@ const DiagnosisPage = () => {
   const locationId = router.query.locationId;
   const goNextPage = () => {
     router.push(paths.recommend + "/" + locationId);
-    console.log(router);
   };
 
   setTimeout(() => {
@@ -21,7 +20,7 @@ const DiagnosisPage = () => {
     if (getImageShow > 4) {
       goNextPage();
     }
-  }, "2500");
+  }, "1500");
 
   return (
     <AllWrapper>
