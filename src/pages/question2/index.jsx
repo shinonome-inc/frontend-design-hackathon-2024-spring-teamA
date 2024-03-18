@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
 import { ChoiceNo } from "../../components/Atoms/choice/no";
 import Progress from "../../components/Molecule/progress";
+import Background from "@/components/Molecule/Background/Background";
 
 const Question2Page = () => {
   const router = useRouter();
@@ -32,29 +33,28 @@ const Question2Page = () => {
   
   return (
     <>
-      <HeaderLogo>
-        <Image src={"/Utils/logo.svg"} width={400} height={200} />
-      </HeaderLogo>
       <Question2Content>
-        <AllWrapper>
-          <Image src="/Background.png" layout="fill" objectFit="fill" />
-          <ContentWrapper>
-            <Question2TextWrapper>
-              <Question2Text>仕事や学業で成果を出したいと思っていますか？</Question2Text>
-            </Question2TextWrapper>
-            <QuestionProgress>
-              <Progress num={2}/>
-            </QuestionProgress>
-            <Question2Choices>
-              <Button onClick={onClickYes}>
-                <ChoiceYes />
-              </Button>
-              <Button onClick={onClickNo}>
-                <ChoiceNo />
-              </Button>
-            </Question2Choices>
-          </ContentWrapper>
-        </AllWrapper>
+        <Background>
+          <AllWrapper>
+            <Image src="/Background.png" layout="fill" objectFit="fill" />
+            <ContentWrapper>
+              <Question2TextWrapper>
+                <Question2Text>仕事や学業で成果を出したいと思っていますか？</Question2Text>
+              </Question2TextWrapper>
+              <QuestionProgress>
+                <Progress num={2}/>
+              </QuestionProgress>
+              <Question2Choices>
+                <Button onClick={onClickYes}>
+                  <ChoiceYes />
+                </Button>
+                <Button onClick={onClickNo}>
+                  <ChoiceNo />
+                </Button>
+              </Question2Choices>
+            </ContentWrapper>
+          </AllWrapper>
+        </Background>
       </Question2Content>
     </>
   );
@@ -62,39 +62,13 @@ const Question2Page = () => {
 
 export default Question2Page;
 
-const HeaderLogo = styled.div`
-  margin: 0;
-  left: 1%;
-  z-index: 100;
-  height: 5%;
-  width: calc(100% - 16px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-`;
-
 const Question2Content = styled.div`
   box-sizing: border-box;
-  top: 0;
-  left: 0;
-  bottom: 0;
   height: calc(100vh - 16px);
-  padding: 4% 13%;
   > img {
     vertical-align: bottom;
   }
-  @media (max-width: 800px) {
-    padding: 10% 3%;
-    overflow-y: hidden;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 `;
-
 const AllWrapper = styled.div`
   margin: 0;
   height: 100%;
