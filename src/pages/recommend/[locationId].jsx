@@ -6,7 +6,8 @@ import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupContents/index";
 import { useState } from "react";
-// import { basePath } from "@/../next.config.mjs";
+import { basePath } from "src/../next.config.mjs";
+const BASE_PATH = basePath ? basePath : "";
 
 const RecommendPage = () => {
   // const BASE_PATH = basePath ? basePath : "";
@@ -14,8 +15,8 @@ const RecommendPage = () => {
   const router = useRouter();
 
   const locationId = router.query.locationId;
-  // let data = require(BASE_PATH+"/@/data/" + locationId);
-  let data = require("/src/data/" + locationId);
+  let data = require(BASE_PATH+"/src/data/" + locationId);
+  // let data = require("/src/data/" + locationId);
 
   const returnTitle = () => {
     router.push(paths.index);
@@ -38,12 +39,12 @@ const RecommendPage = () => {
   return (
     <>
       <LogoWrapper>
-        <Image src={"/Utils/logo.svg"} width={400} height={200} />
+        <Image src={BASE_PATH+"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
       {isPopupOpen ? <PopupContents setOpen={setPopupOpen} link={data.OutsideLink}/> : <></>}
       <ResultBody>
         <AllWrapper>
-          <Image src={"/Background.png"} layout="fill" objectFit="fill" />
+          <Image src={BASE_PATH+"/Background.png"} layout="fill" objectFit="fill" />
           <ContentWrapper>
             <LeftExplanation>
               <LeftContents name={data.Name} photo={data.PhotoLink} setOpen={setPopupOpen} />
@@ -56,7 +57,7 @@ const RecommendPage = () => {
                 <PageButtonSpot onClick={goSpotsPage}>
                   <ButtonTextWrapper>神社周辺のおすすめスポット</ButtonTextWrapper>
                   <ImageWrapper>
-                    <Image src={"/Utils/Vector.png"} width={32} height={32} />
+                    <Image src={BASE_PATH+"/Utils/Vector.png"} width={32} height={32} />
                   </ImageWrapper>
                 </PageButtonSpot>
               </DetailWrapper>
@@ -64,7 +65,7 @@ const RecommendPage = () => {
                 <PageButtonIndex onClick={returnTitle}>
                   <ButtonTextWrapper>再診断する</ButtonTextWrapper>
                   <ImageWrapper>
-                    <Image src={"/Utils/Replay.png"} width={32} height={32} />
+                    <Image src={BASE_PATH+"/Utils/Replay.png"} width={32} height={32} />
                   </ImageWrapper>
                 </PageButtonIndex>
               </ButtonWrapper>

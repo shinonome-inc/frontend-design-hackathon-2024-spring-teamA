@@ -2,16 +2,18 @@ import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
 import React from "react";
+import { basePath } from "src/../next.config.mjs";
+const BASE_PATH = basePath ? basePath : "";
 
 const Background = ({ children }) => {
   return (
     <>
       <LogoWrapper>
-        <Image src={"/Utils/logo.svg"} width={400} height={200} />
+        <Image src={BASE_PATH+"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
       <ResultBody>
         <AllWrapper>
-          <Image src={"/Background.png"} layout="fill" objectFit="fill" />
+          <Image src={BASE_PATH+"/Background.png"} layout="fill" objectFit="fill" />
           {children}
         </AllWrapper>
       </ResultBody>

@@ -3,20 +3,19 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
+import { basePath } from "src/../next.config.mjs";
+const BASE_PATH = basePath ? basePath : "";
 
 const ReturnButton = ({onClick}) => {
   const router = useRouter();
   const locationId = router.query.locationId;
-  // const onClick = () => {
-  //   router.push(paths.index);
-  //   console.log(router);
-  // };
+
   return (
     <ButtonWrapper>
       <PageButtonIndex onClick={onClick}>
         <ButtonTextWrapper>前の画面に戻る</ButtonTextWrapper>
         <ImageWrapper>
-          <Image src={"/Utils/Replay.png"} width={32} height={32} />
+          <Image src={BASE_PATH+"/Utils/Replay.png"} width={32} height={32} />
         </ImageWrapper>
       </PageButtonIndex>
     </ButtonWrapper>
