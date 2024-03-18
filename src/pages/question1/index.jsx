@@ -12,7 +12,7 @@ const Question1Page = () => {
   const router = useRouter();
   const onClickYes = () => {
     setTimeout(() => {}, "2500");
-    router.push({ pathname: paths.question2, query: {
+    router.replace({ pathname: paths.question2, query: {
       shrine1: 0,
       shrine2: 0,
       shrine3: 1,
@@ -23,7 +23,7 @@ const Question1Page = () => {
   };
   const onClickNo = () => {
     setTimeout(() => {}, "2500");
-    router.push({ pathname: paths.question2, query: {
+    router.replace({ pathname: paths.question2, query: {
       shrine1: 1,
       shrine2: 1,
       shrine3: 0,

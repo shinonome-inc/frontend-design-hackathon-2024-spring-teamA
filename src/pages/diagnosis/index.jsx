@@ -12,7 +12,7 @@ const DiagnosisPage = () => {
   const router = useRouter();
   const locationId = router.query.locationId;
   const goNextPage = () => {
-    router.push(paths.recommend + "/" + locationId);
+    router.replace(paths.recommend + "/" + locationId);
   };
 
   setTimeout(() => {

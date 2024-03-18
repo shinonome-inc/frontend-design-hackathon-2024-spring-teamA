@@ -12,7 +12,7 @@ const Question5Page = () => {
   const router = useRouter();
   const onClickYes = () => {
     setTimeout(() => {}, "2500");
-    router.push({ pathname: paths.question6, query: {
+    router.replace({ pathname: paths.question6, query: {
       shrine1: Number(router.query.shrine1),
       shrine2: Number(router.query.shrine2),
       shrine3: Number(router.query.shrine3) + 1,
@@ -23,7 +23,7 @@ const Question5Page = () => {
   };
   const onClickNo = () => {
     setTimeout(() => {}, "2500");
-    router.push({ pathname: paths.question6, query: {
+    router.replace({ pathname: paths.question6, query: {
       shrine1: Number(router.query.shrine1) + 1,
       shrine2: Number(router.query.shrine2) + 1,
       shrine3: Number(router.query.shrine3),

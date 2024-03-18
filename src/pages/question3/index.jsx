@@ -12,7 +12,7 @@ const Question3Page = () => {
   const router = useRouter();
   const onClickYes = () => {
     setTimeout(() => {}, "2500");
-    router.push(
+    router.replace(
       {
         pathname: paths.question4,
         query: {
@@ -29,7 +29,7 @@ const Question3Page = () => {
   };
   const onClickNo = () => {
     setTimeout(() => {}, "2500");
-    router.push(
+    router.replace(
       {
         pathname: paths.question4,
         query: {
