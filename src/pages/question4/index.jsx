@@ -8,72 +8,72 @@ import { ChoiceNo } from "../../components/Atoms/choice/no";
 import Progress from "../../components/Molecule/progress";
 import Background from "@/components/Molecule/Background/Background";
 
-const Question3Page = () => {
+const Question4Page = () => {
   const router = useRouter();
   const onClickYes = () => {
     router.push(
       {
-        pathname: paths.question4,
+        pathname: paths.question5,
         query: {
           shrine1: Number(router.query.shrine1),
-          shrine2: Number(router.query.shrine2) + 1,
-          shrine3: Number(router.query.shrine3),
-          shrine4: Number(router.query.shrine4),
+          shrine2: Number(router.query.shrine2),
+          shrine3: Number(router.query.shrine3) + 1,
+          shrine4: Number(router.query.shrine4) + 1,
           shrine5: Number(router.query.shrine5) + 1,
           shrine6: Number(router.query.shrine6) + 1,
         },
       },
-      paths.question4
+      paths.question5
     );
   };
   const onClickNo = () => {
     router.push(
       {
-        pathname: paths.question4,
+        pathname: paths.question5,
         query: {
-          shrine1: Number(router.query.shrine1) + 1,
+          shrine1: Number(router.query.shrine1),
           shrine2: Number(router.query.shrine2),
           shrine3: Number(router.query.shrine3) + 1,
           shrine4: Number(router.query.shrine4) + 1,
-          shrine5: Number(router.query.shrine5),
-          shrine6: Number(router.query.shrine6),
+          shrine5: Number(router.query.shrine5) + 1,
+          shrine6: Number(router.query.shrine6) + 1,
         },
       },
-      paths.question4
+      paths.question5
     );
   };
 
   return (
     <>
-      <Question3Content>
+      <Question4Content>
         <Background>
           <AllWrapper>
             <ContentWrapper>
-              <Question3TextWrapper>
-                <Question3Text>新しい出会いに対して積極的ですか？</Question3Text>
-              </Question3TextWrapper>
+              <Question4TextWrapper>
+                <Question4Text>家族や友人などとの人間関係に悩んでいますか？</Question4Text>
+              </Question4TextWrapper>
               <QuestionProgress>
-                <Progress num={3} />
+                <Progress num={4} />
               </QuestionProgress>
-              <Question3Choices>
+              <Question4Choices>
                 <Button onClick={onClickYes}>
                   <ChoiceYes />
                 </Button>
                 <Button onClick={onClickNo}>
                   <ChoiceNo />
                 </Button>
-              </Question3Choices>
+              </Question4Choices>
             </ContentWrapper>
           </AllWrapper>
         </Background>
-      </Question3Content>
+      </Question4Content>
     </>
   );
 };
 
-export default Question3Page;
+export default Question4Page;
 
-const Question3Content = styled.div`
+const Question4Content = styled.div`
   box-sizing: border-box;
   height: calc(100vh - 16px);
   > img {
@@ -112,11 +112,11 @@ const QuestionProgress = styled.div`
   align-items: center;
 `;
 
-const Question3TextWrapper = styled.div`
+const Question4TextWrapper = styled.div`
   border-bottom: solid 2px rgba(176, 176, 137, 1);
 `;
 
-const Question3Text = styled.p`
+const Question4Text = styled.p`
   text-align: center;
   margin: 0 0 1px 0;
   color: rgba(72, 72, 9, 1);
@@ -124,7 +124,7 @@ const Question3Text = styled.p`
   font-family: serif;
 `;
 
-const Question3Choices = styled.div`
+const Question4Choices = styled.div`
   display: flex;
   gap: 112px;
   justify-content: center;

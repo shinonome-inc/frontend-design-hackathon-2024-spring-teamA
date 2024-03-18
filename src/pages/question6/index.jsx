@@ -8,72 +8,68 @@ import { ChoiceNo } from "../../components/Atoms/choice/no";
 import Progress from "../../components/Molecule/progress";
 import Background from "@/components/Molecule/Background/Background";
 
-const Question3Page = () => {
+const Question6Page = () => {
   const router = useRouter();
-  const onClickYes = () => {
-    router.push(
-      {
-        pathname: paths.question4,
-        query: {
-          shrine1: Number(router.query.shrine1),
-          shrine2: Number(router.query.shrine2) + 1,
-          shrine3: Number(router.query.shrine3),
-          shrine4: Number(router.query.shrine4),
-          shrine5: Number(router.query.shrine5) + 1,
-          shrine6: Number(router.query.shrine6) + 1,
-        },
-      },
-      paths.question4
-    );
+
+  const queryYes = {
+    shrine1: Number(router.query.shrine1),
+    shrine2: Number(router.query.shrine2) + 1,
+    shrine3: Number(router.query.shrine3),
+    shrine4: Number(router.query.shrine4),
+    shrine5: Number(router.query.shrine5) + 1,
+    shrine6: Number(router.query.shrine6) + 1,
   };
-  const onClickNo = () => {
-    router.push(
-      {
-        pathname: paths.question4,
-        query: {
-          shrine1: Number(router.query.shrine1) + 1,
-          shrine2: Number(router.query.shrine2),
-          shrine3: Number(router.query.shrine3) + 1,
-          shrine4: Number(router.query.shrine4) + 1,
-          shrine5: Number(router.query.shrine5),
-          shrine6: Number(router.query.shrine6),
-        },
-      },
-      paths.question4
-    );
+  const queryNo = {
+    shrine1: Number(router.query.shrine1) + 1,
+    shrine2: Number(router.query.shrine2),
+    shrine3: Number(router.query.shrine3) + 1,
+    shrine4: Number(router.query.shrine4) + 1,
+    shrine5: Number(router.query.shrine5),
+    shrine6: Number(router.query.shrine6),
   };
 
+  const onClickYes = () => {
+    const maxIndex = Object.values(queryYes).indexOf(Math.max(...Object.values(queryYes))) + 1;
+    const query = "shrine" + String(maxIndex);
+    setTimeout(() => {}, "2500");
+    router.push({ pathname: paths.diagnosis, query: { locationId: query } }, paths.diagnosis);
+  };
+  const onClickNo = () => {
+    const maxIndex = Object.values(queryNo).indexOf(Math.max(...Object.values(queryNo))) + 1;
+    const query = "shrine" + String(maxIndex);
+    setTimeout(() => {}, "2500");
+    router.push({ pathname: paths.diagnosis, query: { locationId: query } }, paths.diagnosis);
+  };
   return (
     <>
-      <Question3Content>
+      <Question6Content>
         <Background>
           <AllWrapper>
             <ContentWrapper>
-              <Question3TextWrapper>
-                <Question3Text>新しい出会いに対して積極的ですか？</Question3Text>
-              </Question3TextWrapper>
+              <Question6TextWrapper>
+                <Question6Text>最近何か運が悪いなと感じたことはありますか？</Question6Text>
+              </Question6TextWrapper>
               <QuestionProgress>
-                <Progress num={3} />
+                <Progress num={6} />
               </QuestionProgress>
-              <Question3Choices>
+              <Question6Choices>
                 <Button onClick={onClickYes}>
                   <ChoiceYes />
                 </Button>
                 <Button onClick={onClickNo}>
                   <ChoiceNo />
                 </Button>
-              </Question3Choices>
+              </Question6Choices>
             </ContentWrapper>
           </AllWrapper>
         </Background>
-      </Question3Content>
+      </Question6Content>
     </>
   );
 };
+export default Question6Page;
 
-export default Question3Page;
-
-const Question3Content = styled.div`
+const Question6Content = styled.div`
   box-sizing: border-box;
   height: calc(100vh - 16px);
   > img {
@@ -112,11 +108,11 @@ const QuestionProgress = styled.div`
   align-items: center;
 `;
 
-const Question3TextWrapper = styled.div`
+const Question6TextWrapper = styled.div`
   border-bottom: solid 2px rgba(176, 176, 137, 1);
 `;
 
-const Question3Text = styled.p`
+const Question6Text = styled.p`
   text-align: center;
   margin: 0 0 1px 0;
   color: rgba(72, 72, 9, 1);
@@ -124,7 +120,7 @@ const Question3Text = styled.p`
   font-family: serif;
 `;
 
-const Question3Choices = styled.div`
+const Question6Choices = styled.div`
   display: flex;
   gap: 112px;
   justify-content: center;
