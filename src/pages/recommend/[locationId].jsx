@@ -15,7 +15,7 @@ const RecommendPage = () => {
 
   const locationId = router.query.locationId;
   // let data = require(BASE_PATH+"/@/data/" + locationId);
-  let data = require("/@/data/" + locationId);
+  let data = require("/src/data/" + locationId);
 
   const returnTitle = () => {
     router.push(paths.index);
