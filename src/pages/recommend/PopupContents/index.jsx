@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
-const PopupContents = ({setOpen}) => {
+const PopupContents = ({ setOpen, link }) => {
+  const router = useRouter();
+
+  const moveLink = () => {
+    router.replace(link);
+  };
+
   return (
     <PopWrapper>
       <MainWrapper>
@@ -11,7 +18,7 @@ const PopupContents = ({setOpen}) => {
           よろしいでしょうか？
         </TextWrapper>
         <ButtonWrapper>
-          <OutsideButton>はい</OutsideButton>
+          <OutsideButton onClick={moveLink}>はい</OutsideButton>
           <ReturnButton onClick={() => { setOpen(false) }}>いいえ</ReturnButton>
         </ButtonWrapper>
       </MainWrapper>

@@ -22,6 +22,11 @@ const DiagnosisPage = () => {
     }
   }, "1500");
 
+  window.addEventListener("pageshow", function (e) {
+    history.pushState(null, null, null);
+    return;
+  });
+
   return (
     <AllWrapper>
       <Background>

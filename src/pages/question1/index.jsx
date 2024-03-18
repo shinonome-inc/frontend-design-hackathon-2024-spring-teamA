@@ -11,26 +11,37 @@ import Background from "@/components/Molecule/Background/Background";
 const Question1Page = () => {
   const router = useRouter();
   const onClickYes = () => {
-    setTimeout(() => {}, "2500");
-    router.replace({ pathname: paths.question2, query: {
-      shrine1: 0,
-      shrine2: 0,
-      shrine3: 1,
-      shrine4: 0,
-      shrine5: 1,
-      shrine6: 1,
-    }}, paths.question2);
+    router.replace(
+      {
+        pathname: paths.question2,
+        query: {
+          shrine1: 0,
+          shrine2: 0,
+          shrine3: 1,
+          shrine4: 0,
+          shrine5: 1,
+          shrine6: 1,
+        },
+      },
+      paths.question2
+    );
   };
+
   const onClickNo = () => {
-    setTimeout(() => {}, "2500");
-    router.replace({ pathname: paths.question2, query: {
-      shrine1: 1,
-      shrine2: 1,
-      shrine3: 0,
-      shrine4: 1,
-      shrine5: 0,
-      shrine6: 0,
-    } }, paths.question2);
+    router.replace(
+      {
+        pathname: paths.question2,
+        query: {
+          shrine1: 1,
+          shrine2: 1,
+          shrine3: 0,
+          shrine4: 1,
+          shrine5: 0,
+          shrine6: 0,
+        },
+      },
+      paths.question2
+    );
   };
 
   return (

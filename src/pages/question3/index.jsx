@@ -11,7 +11,7 @@ import Background from "@/components/Molecule/Background/Background";
 const Question3Page = () => {
   const router = useRouter();
   const onClickYes = () => {
-    setTimeout(() => {}, "2500");
+    setTimeout(() => {}, "400");
     router.replace(
       {
         pathname: paths.question4,
@@ -28,7 +28,7 @@ const Question3Page = () => {
     );
   };
   const onClickNo = () => {
-    setTimeout(() => {}, "2500");
+    setTimeout(() => {}, "400");
     router.replace(
       {
         pathname: paths.question4,

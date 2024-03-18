@@ -11,7 +11,7 @@ import Background from "@/components/Molecule/Background/Background";
 const Question2Page = () => {
   const router = useRouter();
   const onClickYes = () => {
-    setTimeout(() => {}, "2500");
+    setTimeout(() => {}, "200");
     router.replace({ pathname: paths.question3, query: {
       shrine1: Number(router.query.shrine1),
       shrine2: Number(router.query.shrine2),
@@ -22,7 +22,7 @@ const Question2Page = () => {
     } }, paths.question3);
   };
   const onClickNo = () => {
-    setTimeout(() => {}, "2500");
+    setTimeout(() => {}, "200");
     router.replace({ pathname: paths.question3, query: {
       shrine1: Number(router.query.shrine1) + 1,
       shrine2: Number(router.query.shrine2) + 1,

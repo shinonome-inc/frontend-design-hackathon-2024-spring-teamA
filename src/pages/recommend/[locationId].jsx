@@ -10,26 +10,34 @@ import { useState } from "react";
 const RecommendPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const router = useRouter();
+
   const locationId = router.query.locationId;
   let data = require("@/data/" + locationId);
 
   const returnTitle = () => {
     router.push(paths.index);
   };
+
   const goSpotsPage = () => {
     router.push(paths.spots + "/" + locationId);
   };
+
   window.addEventListener("beforeunload", function (event) {
     event.preventDefault();
     event.returnValue = "リロード禁止です！";
   })
+
+  window.addEventListener("pageshow", function (e) {
+    history.pushState(null, null, null);
+    return;
+});
 
   return (
     <>
       <LogoWrapper>
         <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
-      {isPopupOpen ? <PopupContents setOpen={setPopupOpen} /> : <></>}
+      {isPopupOpen ? <PopupContents setOpen={setPopupOpen} link={data.OutsideLink}/> : <></>}
       <ResultBody>
         <AllWrapper>
           <Image src={"/Background.png"} layout="fill" objectFit="fill" />

@@ -31,15 +31,17 @@ const Question6Page = () => {
   const onClickYes = () => {
     const maxIndex = Object.values(queryYes).indexOf(Math.max(...Object.values(queryYes))) + 1;
     const query = "shrine" + String(maxIndex);
-    setTimeout(() => {}, "2500");
+    setTimeout(() => {}, "1000");
     router.replace({ pathname: paths.diagnosis, query: { locationId: query } }, paths.diagnosis);
   };
+
   const onClickNo = () => {
     const maxIndex = Object.values(queryNo).indexOf(Math.max(...Object.values(queryNo))) + 1;
     const query = "shrine" + String(maxIndex);
-    setTimeout(() => {}, "2500");
+    setTimeout(() => {}, "1000");
     router.replace({ pathname: paths.diagnosis, query: { locationId: query } }, paths.diagnosis);
   };
+  
   return (
     <>
       <Question6Content>
