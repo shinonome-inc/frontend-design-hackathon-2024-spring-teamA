@@ -8,7 +8,7 @@ import { TitleText } from "../components/title/Title";
 import { LeftText } from "../components/title/Left";
 import { RightText } from "../components/title/Right";
 import { GlobalStyle } from "../components/GlobalStyle";
-import { basePath } from "src/../next.config.mjs";
+import { basePath } from "../../next.config.mjs";
 const BASE_PATH = basePath ? basePath : "";
 
 const IndexPage = () => {

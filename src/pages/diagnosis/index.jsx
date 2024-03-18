@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Background from "./Background";
 import DiagnosisText from "./DiagnosisText";
+import { basePath } from "../../../next.config.mjs";
+const BASE_PATH = basePath ? basePath : "";
 
 const DiagnosisPage = () => {
   const [getImageShow, setImageShow] = useState(0);
@@ -36,13 +38,13 @@ const DiagnosisPage = () => {
           </TextWrapper>
           <AllImageWrapper>
             <ImageWrapper visible={getImageShow % 4 > 0}>
-              <Image src={"/diagnosis/diagnosing-level1.svg"} width={80} height={80} />
+              <Image src={BASE_PATH+"/diagnosis/diagnosing-level1.svg"} width={80} height={80} />
             </ImageWrapper>
             <ImageWrapper visible={getImageShow % 4 > 1}>
-              <Image src={"/diagnosis/diagnosing-level2.svg"} width={80} height={80} />
+              <Image src={BASE_PATH+"/diagnosis/diagnosing-level2.svg"} width={80} height={80} />
             </ImageWrapper>
             <ImageWrapper visible={getImageShow % 4 > 2}>
-              <Image src={"/diagnosis/diagnosing-level3.svg"} width={80} height={80} />
+              <Image src={BASE_PATH+"/diagnosis/diagnosing-level3.svg"} width={80} height={80} />
             </ImageWrapper>
           </AllImageWrapper>
         </DiagnosisWrapper>

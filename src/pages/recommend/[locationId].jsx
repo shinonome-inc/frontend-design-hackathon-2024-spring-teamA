@@ -6,7 +6,7 @@ import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupContents/index";
 import { useState } from "react";
-import { basePath } from "src/../next.config.mjs";
+import { basePath } from "../../../next.config.mjs";
 const BASE_PATH = basePath ? basePath : "";
 
 const RecommendPage = () => {

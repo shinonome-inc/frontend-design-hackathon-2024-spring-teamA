@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
 import React from "react";
-import { basePath } from "src/../next.config.mjs";
+import { basePath } from "../../../next.config.mjs";
 const BASE_PATH = basePath ? basePath : "";
 
 const Background = ({ children }) => {
