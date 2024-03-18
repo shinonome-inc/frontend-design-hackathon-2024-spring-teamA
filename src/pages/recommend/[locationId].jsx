@@ -6,15 +6,16 @@ import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupContents/index";
 import { useState } from "react";
-import { basePath } from "@/../next.config.mjs";
+// import { basePath } from "@/../next.config.mjs";
 
 const RecommendPage = () => {
-  const BASE_PATH = basePath ? basePath : "";
+  // const BASE_PATH = basePath ? basePath : "";
   const [isPopupOpen, setPopupOpen] = useState(false);
   const router = useRouter();
 
   const locationId = router.query.locationId;
-  let data = require(BASE_PATH+"/@/data/" + locationId);
+  // let data = require(BASE_PATH+"/@/data/" + locationId);
+  let data = require("/@/data/" + locationId);
 
   const returnTitle = () => {
     router.push(paths.index);
