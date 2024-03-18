@@ -16,9 +16,9 @@ const Question4Page = () => {
         pathname: paths.question5,
         query: {
           shrine1: Number(router.query.shrine1),
-          shrine2: Number(router.query.shrine2),
+          shrine2: Number(router.query.shrine2) + 1,
           shrine3: Number(router.query.shrine3) + 1,
-          shrine4: Number(router.query.shrine4) + 1,
+          shrine4: Number(router.query.shrine4),
           shrine5: Number(router.query.shrine5) + 1,
           shrine6: Number(router.query.shrine6) + 1,
         },
@@ -31,12 +31,12 @@ const Question4Page = () => {
       {
         pathname: paths.question5,
         query: {
-          shrine1: Number(router.query.shrine1),
+          shrine1: Number(router.query.shrine1) + 1,
           shrine2: Number(router.query.shrine2),
-          shrine3: Number(router.query.shrine3) + 1,
+          shrine3: Number(router.query.shrine3),
           shrine4: Number(router.query.shrine4) + 1,
-          shrine5: Number(router.query.shrine5) + 1,
-          shrine6: Number(router.query.shrine6) + 1,
+          shrine5: Number(router.query.shrine5),
+          shrine6: Number(router.query.shrine6),
         },
       },
       paths.question5
