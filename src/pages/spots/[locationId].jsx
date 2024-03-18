@@ -73,8 +73,8 @@ const SpotsWrapper = styled.div`
   overflow-y: scroll;
 
   @media (max-width: 600px) {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
   }
 `;
 

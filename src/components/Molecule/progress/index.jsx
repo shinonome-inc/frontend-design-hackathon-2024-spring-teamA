@@ -10,8 +10,6 @@ const N = 6;
 
 export const Progress = ({ num }) => {
   const Marks = (i) => {
-    console.log(i);
-    console.log(num);
     if (i < num - 1) {
       return (<MarklogoDone />)
     } else if (i === num - 1) {
@@ -22,9 +20,6 @@ export const Progress = ({ num }) => {
   } 
 
   const Lines = (i) => {
-    i = Number(i);
-    console.log(i);
-    console.log(num);
     if (i < num - 1) {
       return (<Doneline />)
     }
