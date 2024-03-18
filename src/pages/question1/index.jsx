@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
 import { ChoiceNo } from "../../components/Atoms/choice/no";
-import Progressfirst from "../../components/Molecule/progress1";
+import Progress from "../../components/Molecule/progress";
 
 const Question1Page = () => {
   const router = useRouter();
@@ -60,7 +60,7 @@ const Question1Page = () => {
               <Question1Text>新しい出会いに対して積極的ですか？</Question1Text>
             </Question1TextWrapper>
             <QuestionProgress>
-              <Progressfirst />
+              <Progress num={1} />
             </QuestionProgress>
             <Question1Choices>
               <Button onClick={onClickYes}>

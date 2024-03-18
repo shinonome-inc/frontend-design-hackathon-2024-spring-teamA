@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
 import { ChoiceNo } from "../../components/Atoms/choice/no";
-import Progresssecond from "../../components/Molecule/progress2";
+import Progress from "../../components/Molecule/progress";
 
 const Question2Page = () => {
   const router = useRouter();
@@ -60,7 +60,7 @@ const Question2Page = () => {
               <Question2Text>仕事や学業で成果を出したいと思っていますか？</Question2Text>
             </Question2TextWrapper>
             <QuestionProgress>
-              <Progresssecond />
+              <Progress num={2}/>
             </QuestionProgress>
             <Question2Choices>
               <Button onClick={onClickYes}>

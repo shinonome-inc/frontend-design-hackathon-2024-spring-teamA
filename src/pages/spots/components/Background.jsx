@@ -9,18 +9,18 @@ const Background = ({ children }) => {
       <LogoWrapper>
         <Image src={"/Utils/logo.svg"} width={400} height={200} />
       </LogoWrapper>
-      <ResultBody>
+      <MainBody>
         <AllWrapper>
           <Image src={"/Background.png"} layout="fill" objectFit="fill" />
           {children}
         </AllWrapper>
-      </ResultBody>
+      </MainBody>
     </>
   );
 };
 export default Background;
 
-const ResultBody = styled.div`
+const MainBody = styled.div`
   box-sizing: border-box;
   top: 0;
   left: 0;
