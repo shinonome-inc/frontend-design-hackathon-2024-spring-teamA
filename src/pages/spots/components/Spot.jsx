@@ -51,6 +51,7 @@ const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
   margin: 0;
+  position: relative;
 `;
 
 const TextWrapper = styled.div`
