@@ -8,8 +8,6 @@ import { TitleText } from "../components/title/Title";
 import { LeftText } from "../components/title/Left";
 import { RightText } from "../components/title/Right";
 import { GlobalStyle } from "../components/GlobalStyle";
-import { basePath } from "../../next.config.mjs";
-const BASE_PATH = basePath ? basePath : "";
 
 const IndexPage = () => {
   const router = useRouter();
@@ -21,12 +19,12 @@ const IndexPage = () => {
     <>
       <GlobalStyle />
       <LogoWrapper>
-        <Image src={BASE_PATH+"/title/logo.svg"} width={400} height={200} />
+        <Image src={"/title/logo.svg"} width={400} height={200} />
       </LogoWrapper>
       <AllWrapper>
-        <Image src={BASE_PATH+"/Background.png"} layout="fill" />
+        <Image src={"/Background.png"} layout="fill" />
         <ImageWrapper>
-          <Image src={BASE_PATH+"/title/torii-imge.svg"} alt="鳥居" layout="fill" objectFit="contain" />
+          <Image src={"/title/torii-imge.svg"} alt="鳥居" layout="fill" objectFit="contain" />
         </ImageWrapper>
         <TitleWrapper>
           <TitleText Text="みちびきおやしろ" />
