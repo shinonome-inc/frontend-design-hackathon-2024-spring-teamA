@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
 import { GlobalStyle } from "@/components/GlobalStyle";
-import { basePath } from "../../../../next.config.mjs";
-const BASE_PATH = basePath ? basePath : "";
 
 const Spot = ({ spot }) => {
   window.addEventListener("beforeunload", function (event) {
@@ -15,7 +13,10 @@ const Spot = ({ spot }) => {
     <AllWrapper>
       <SpotContent>
         <ImageWrapper>
-          <Image src={BASE_PATH+spot.PhotoLink} layout="fill" objectFit="cover" />
+          <Image src={spot.PhotoLink}
+            fill
+            style={{ objectFit: "cover" }}
+          />
         </ImageWrapper>
         <TextWrapper>
           <GlobalStyle />

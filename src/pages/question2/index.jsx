@@ -1,6 +1,6 @@
 import { paths } from "../../paths";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
@@ -10,29 +10,40 @@ import Background from "@/components/Molecule/Background/Background";
 
 const Question2Page = () => {
   const router = useRouter();
+
   const onClickYes = () => {
-    setTimeout(() => {}, "1000");
-    router.replace({ pathname: paths.question3, query: {
-      shrine1: Number(router.query.shrine1),
-      shrine2: Number(router.query.shrine2),
-      shrine3: Number(router.query.shrine3) + 1,
-      shrine4: Number(router.query.shrine4) + 1,
-      shrine5: Number(router.query.shrine5) + 1,
-      shrine6: Number(router.query.shrine6) + 1,
-    } }, paths.question3);
+    router.replace(
+      {
+        pathname: paths.question3,
+        query: {
+          shrine1: Number(router.query.shrine1),
+          shrine2: Number(router.query.shrine2),
+          shrine3: Number(router.query.shrine3) + 1,
+          shrine4: Number(router.query.shrine4) + 1,
+          shrine5: Number(router.query.shrine5) + 1,
+          shrine6: Number(router.query.shrine6) + 1,
+        },
+      },
+      paths.question3
+    );
   };
   const onClickNo = () => {
-    setTimeout(() => {}, "1000");
-    router.replace({ pathname: paths.question3, query: {
-      shrine1: Number(router.query.shrine1) + 1,
-      shrine2: Number(router.query.shrine2) + 1,
-      shrine3: Number(router.query.shrine3),
-      shrine4: Number(router.query.shrine4),
-      shrine5: Number(router.query.shrine5),
-      shrine6: Number(router.query.shrine6),
-    } }, paths.question3);
+    router.replace(
+      {
+        pathname: paths.question3,
+        query: {
+          shrine1: Number(router.query.shrine1) + 1,
+          shrine2: Number(router.query.shrine2) + 1,
+          shrine3: Number(router.query.shrine3),
+          shrine4: Number(router.query.shrine4),
+          shrine5: Number(router.query.shrine5),
+          shrine6: Number(router.query.shrine6),
+        },
+      },
+      paths.question3
+    );
   };
-  
+
   return (
     <>
       <Question2Content>
@@ -44,7 +55,7 @@ const Question2Page = () => {
                 <Question2Text>仕事や学業で成果を出したいと思っていますか？</Question2Text>
               </Question2TextWrapper>
               <QuestionProgress>
-                <Progress num={2}/>
+                <Progress num={2} />
               </QuestionProgress>
               <Question2Choices>
                 <Button onClick={onClickYes}>

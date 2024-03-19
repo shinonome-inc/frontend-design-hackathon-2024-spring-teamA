@@ -22,9 +22,14 @@ const IndexPage = () => {
         <Image src={"/title/logo.svg"} width={400} height={200} />
       </LogoWrapper>
       <AllWrapper>
-        <Image src={"/Background.png"} layout="fill" />
+        <Image src={"/Background.png"} fill />
         <ImageWrapper>
-          <Image src={"/title/torii-imge.svg"} alt="鳥居" layout="fill" objectFit="contain" />
+          <Image src={"/title/torii-imge.svg"}
+            alt="鳥居"
+            fill
+            style={{
+              objectFit: "contain"
+            }} />
         </ImageWrapper>
         <TitleWrapper>
           <TitleText Text="みちびきおやしろ" />

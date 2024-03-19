@@ -1,6 +1,6 @@
 import { paths } from "../../paths";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
@@ -10,8 +10,8 @@ import Background from "@/components/Molecule/Background/Background";
 
 const Question4Page = () => {
   const router = useRouter();
+
   const onClickYes = () => {
-    setTimeout(() => {}, "1000");
     router.replace(
       {
         pathname: paths.question5,
@@ -29,7 +29,6 @@ const Question4Page = () => {
   };
   
   const onClickNo = () => {
-    setTimeout(() => {}, "1000");
     router.replace(
       {
         pathname: paths.question5,

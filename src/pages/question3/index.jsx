@@ -1,6 +1,6 @@
 import { paths } from "../../paths";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { ChoiceYes } from "../../components/Atoms/choice/yes";
@@ -10,6 +10,7 @@ import Background from "@/components/Molecule/Background/Background";
 
 const Question3Page = () => {
   const router = useRouter();
+
   const onClickYes = () => {
     setTimeout(() => {}, "1000");
     router.replace(
