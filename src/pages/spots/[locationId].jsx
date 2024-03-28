@@ -1,13 +1,10 @@
-import { paths } from "../../paths";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { colors } from "@/colors";
-import Image from "next/image";
 import Background from "./components/Background";
 import TitleText from "./components/TitleText";
 import ReturnButton from "./components/Button";
 import Spot from "./components/Spot";
-import { shrines } from "@/data/shrine";
+import { shrines } from "../../data/shrine";
 
 const SpotsPage = () => {
   const router = useRouter();

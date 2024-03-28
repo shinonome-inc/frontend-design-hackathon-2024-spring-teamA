@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "@/colors";
+import { colors } from "../../../colors";
 import Image from "next/image";
 import { GlobalStyle } from "./GlobalStyle";
 
