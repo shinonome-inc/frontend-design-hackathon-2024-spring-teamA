@@ -8,5 +8,8 @@ const nextConfig = {
   // images: {
   //   loader: "custom",
   // },
+  images: {
+    unoptimized : true,
+  }
 };
 export default nextConfig;
