@@ -4,11 +4,13 @@ import Image from "next/image";
 import { GlobalStyle } from "../../../components/GlobalStyle";
 
 const Spot = ({ spot }) => {
+  const photoLink = spot.PhotoLink;
+
   return (
     <AllWrapper>
       <SpotContent>
         <ImageWrapper>
-          <Image src={spot.PhotoLink}
+          <Image src={photoLink}
             fill
             style={{ objectFit: "cover" }}
           />
