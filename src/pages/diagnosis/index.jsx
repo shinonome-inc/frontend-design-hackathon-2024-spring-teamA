@@ -17,15 +17,15 @@ const DiagnosisPage = () => {
 
   setTimeout(() => {
     setImageShow(getImageShow + 1);
-    if (getImageShow > 4) {
+    if (getImageShow > 6) {
       goNextPage();
     }
   }, "1500");
 
-  window.addEventListener("pageshow", function (e) {
-    history.pushState(null, null, null);
-    return;
-  });
+  // window.addEventListener("pageshow", function (e) {
+  //   history.pushState(null, null, null);
+  //   return;
+  // });
 
   return (
     <AllWrapper>
