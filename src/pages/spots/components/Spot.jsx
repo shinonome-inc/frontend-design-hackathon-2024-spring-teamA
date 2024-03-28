@@ -26,6 +26,10 @@ const Spot = ({ spot }) => {
 };
 export default Spot;
 
+export async function getServerSideProps(context) {
+  return { props: spot };
+}
+
 const AllWrapper = styled.div`
   box-sizing: border-box;
   width: 100%;
