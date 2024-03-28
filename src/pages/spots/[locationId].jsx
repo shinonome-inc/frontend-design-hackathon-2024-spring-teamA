@@ -5,7 +5,6 @@ import Image from "next/image";
 import Background from "./components/Background";
 import TitleText from "./components/TitleText";
 import ReturnButton from "./components/Button";
-// import Spot from "./components/Spot";
 import { shrines } from "../../data/shrine";
 import { GlobalStyle } from "../../components/GlobalStyle";
 
