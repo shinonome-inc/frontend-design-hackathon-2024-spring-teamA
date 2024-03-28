@@ -37,6 +37,7 @@ const SpotsPage = () => {
     router.back();
     console.log(router);
   };
+
   return (
     <AllWrapper>
       <Background>
