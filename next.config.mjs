@@ -5,8 +5,8 @@ const nextConfig = {
     styledComponents: true,
   },
   output: "export",
-  images: {
-    loader: "custom",
-  },
+  // images: {
+  //   loader: "custom",
+  // },
 };
 export default nextConfig;
