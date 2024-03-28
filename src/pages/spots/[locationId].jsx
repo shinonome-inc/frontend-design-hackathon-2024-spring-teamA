@@ -7,15 +7,35 @@ import Background from "./components/Background";
 import TitleText from "./components/TitleText";
 import ReturnButton from "./components/Button";
 import Spot from "./components/Spot";
+import { shrines } from "@/data/shrine";
 
 const SpotsPage = () => {
   const router = useRouter();
   const locationId = router.query.locationId;
-  window.addEventListener("beforeunload", function (event) {
-    event.preventDefault();
-    event.returnValue = "リロード禁止です！";
-  })
-  let data = require("@/data/" + locationId);
+
+  let data = undefined;
+  switch (locationId) {
+    case "shrine1":
+      data = shrines.shrine1;
+      break;
+    case "shrine2":
+      data = shrines.shrine2;
+      break;
+    case "shrine3":
+      data = shrines.shrine3;
+      break;
+    case "shrine4":
+      data = shrines.shrine4;
+      break;
+    case "shrine5":
+      data = shrines.shrine5;
+      break;
+    case "shrine6":
+      data = shrines.shrine6;
+      break;
+    default:
+      data = shrines.shrine1;
+  }
   const onClick = () => {
     router.back();
     console.log(router);

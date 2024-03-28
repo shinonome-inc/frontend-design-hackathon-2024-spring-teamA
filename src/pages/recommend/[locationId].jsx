@@ -6,15 +6,36 @@ import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupContents/index";
 import { useState } from "react";
-import { allData } from "@/data/shrine.json";
+import { shrines } from "@/data/shrine";
 
 const RecommendPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const router = useRouter();
 
   const locationId = router.query.locationId;
-  let data = require("@/data/" + locationId);
-  console.log(allData);
+  let data = undefined;
+  switch (locationId) {
+    case "shrine1":
+      data = shrines.shrine1;
+      break;
+    case "shrine2":
+      data = shrines.shrine2;
+      break;
+    case "shrine3":
+      data = shrines.shrine3;
+      break;
+    case "shrine4":
+      data = shrines.shrine4;
+      break;
+    case "shrine5":
+      data = shrines.shrine5;
+      break;
+    case "shrine6":
+      data = shrines.shrine6;
+      break;
+    default:
+      data = shrines.shrine1;
+  }
 
   const returnTitle = () => {
     router.push(paths.index);
@@ -23,11 +44,6 @@ const RecommendPage = () => {
   const goSpotsPage = () => {
     router.push(paths.spots + "/" + locationId);
   };
-
-  window.addEventListener("beforeunload", function (event) {
-    event.returnValue = "リロード禁止です！";
-    event.preventDefault();
-  })
 
   return (
     <>

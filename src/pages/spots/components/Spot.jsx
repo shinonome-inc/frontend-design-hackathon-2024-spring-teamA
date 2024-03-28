@@ -4,10 +4,6 @@ import Image from "next/image";
 import { GlobalStyle } from "@/components/GlobalStyle";
 
 const Spot = ({ spot }) => {
-  window.addEventListener("beforeunload", function (event) {
-    event.preventDefault();
-    event.returnValue = "リロード禁止です！";
-  })
 
   return (
     <AllWrapper>
