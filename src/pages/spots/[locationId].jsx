@@ -1,10 +1,13 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import { colors } from "../../colors";
+import Image from "next/image";
 import Background from "./components/Background";
 import TitleText from "./components/TitleText";
 import ReturnButton from "./components/Button";
-import Spot from "./components/Spot";
+// import Spot from "./components/Spot";
 import { shrines } from "../../data/shrine";
+import { GlobalStyle } from "../../components/GlobalStyle";
 
 const SpotsPage = () => {
   const router = useRouter();
@@ -45,13 +48,52 @@ const SpotsPage = () => {
           <TitleText />
           <SpotsWrapper>
             <EachWrapper>
-              <Spot spot={data.Spot1} />
+              {/* <Spot spot={data.Spot1} /> */}
+              <SpotContent>
+                <ImageWrapper>
+                  <Image src={data.Spot1.PhotoLink}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </ImageWrapper>
+                <TextWrapper>
+                  <GlobalStyle />
+                  <SpotName>{data.Spot1.Name}</SpotName>
+                  <SpotExplanation>{data.Spot1.Explanation}</SpotExplanation>
+                </TextWrapper>
+              </SpotContent>
             </EachWrapper>
             <EachWrapper>
-              <Spot spot={data.Spot2} />
+              {/* <Spot spot={data.Spot2} /> */}
+              <SpotContent>
+                <ImageWrapper>
+                  <Image src={data.Spot2.PhotoLink}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </ImageWrapper>
+                <TextWrapper>
+                  <GlobalStyle />
+                  <SpotName>{data.Spot2.Name}</SpotName>
+                  <SpotExplanation>{data.Spot2.Explanation}</SpotExplanation>
+                </TextWrapper>
+              </SpotContent>
             </EachWrapper>
             <EachWrapper>
-              <Spot spot={data.Spot3} />
+              {/* <Spot spot={data.Spot3} /> */}
+              <SpotContent>
+                <ImageWrapper>
+                  <Image src={data.Spot3.PhotoLink}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </ImageWrapper>
+                <TextWrapper>
+                  <GlobalStyle />
+                  <SpotName>{data.Spot3.Name}</SpotName>
+                  <SpotExplanation>{data.Spot3.Explanation}</SpotExplanation>
+                </TextWrapper>
+              </SpotContent>
             </EachWrapper>
           </SpotsWrapper>
           <ReturnButton onClick={onClick} />
@@ -101,4 +143,61 @@ const EachWrapper = styled.div`
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+`;
+
+const SpotContent = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: 0px;
+  border-radius: 50px;
+  min-height: 400px;
+  inline-size: 100%;
+  word-break: break-all;
+`;
+
+const ImageWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: relative;
+`;
+
+const TextWrapper = styled.div`
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  background-color: ${colors.Write};
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 0px 0px 10px 10px;
+  inline-size: 100%;
+  word-break: break-all;
+`;
+
+const SpotName = styled.div`
+  margin: 0;
+  width: 100%;
+  font-family: Noto Serif JP;
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  inline-size: 100%;
+  word-break: break-all;
+`;
+
+const SpotExplanation = styled.div`
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Noto Serif JP;
+  font-size: 28px;
+  inline-size: 100%;
+  word-break: break-all;
 `;
