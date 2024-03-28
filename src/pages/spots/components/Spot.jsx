@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "@/colors";
 import Image from "next/image";
-import { GlobalStyle } from "@/components/GlobalStyle";
+import { GlobalStyle } from "./GlobalStyle";
 
 const Spot = ({ spot }) => {
   const PhotoLink = spot.PhotoLink;
