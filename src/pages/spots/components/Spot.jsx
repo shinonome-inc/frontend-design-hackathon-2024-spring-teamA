@@ -3,6 +3,8 @@
 // import Image from "next/image";
 // import { GlobalStyle } from "../../../components/GlobalStyle";
 
+const Spot = () => { };
+export default Spot;
 // const Spot = ({ spot }) => {
 //   const photoLink = spot.PhotoLink;
 
