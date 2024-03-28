@@ -1,16 +1,14 @@
 import styled from "styled-components";
 import { colors } from "../../../colors";
 import Image from "next/image";
-import { GlobalStyle } from "./GlobalStyle";
+import { GlobalStyle } from "../../../components/GlobalStyle";
 
 const Spot = ({ spot }) => {
-  const PhotoLink = spot.PhotoLink;
-
   return (
     <AllWrapper>
       <SpotContent>
         <ImageWrapper>
-          <Image src={PhotoLink}
+          <Image src={spot.PhotoLink}
             fill
             style={{ objectFit: "cover" }}
           />
